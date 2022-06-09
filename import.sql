@@ -11,7 +11,7 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `berichten` (
-    berichtId NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    berichtId MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     titel varchar(100) NOT NULL,
     samenvatting TINYTEXT NOT NULL,
     omschrijving LONGTEXT NOT NULL,
