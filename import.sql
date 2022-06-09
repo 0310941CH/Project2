@@ -17,5 +17,7 @@ CREATE TABLE `berichten` (
     omschrijving LONGTEXT NOT NULL,
     datum_toegevoegd datetime NOT NULL,
     datum_aangepast datetime NOT NULL,
-    auteur varchar(100) NOT NULL
+    auteur varchar(100) NOT NULL,
+    images varchar(255) NOT NULL,
+    categorie varchar(100) NOT NULL
 );
