@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contentContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 990px;
+    min-width: 280px;
+    margin: auto;
+    padding: 10px;
+}
+
+.artikelAfbeelding {
+    border-radius: 10px;
+}
+
+.artikelTitel {
+    position: absolute;
+    bottom: 1px;
+    left: 16px;
+}
+
+.afbeeldingTitelBox {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.samenvatting {
+    font-weight: bold;
+}
+
+.postInfo {
+    color: #878787;
+    font-size: 13px;
+}
