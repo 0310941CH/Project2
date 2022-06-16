@@ -4,23 +4,31 @@ body {
 
 .contentContainer {
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    max-width: 990px;
-    min-width: 280px;
     margin: auto;
-    padding: 10px;
+    padding-right: 200px;
+        padding-left: 200px;
 }
 
+.zijContainer {
+    width: 30%;
+}
+
+.artikelContainer {
+    width: 60%;
+    margin-right: 30px;
+}
 .artikelAfbeelding {
     border-radius: 10px;
+    width: 100%;
 }
 
 .artikelTitel {
     position: absolute;
-    bottom: 1px;
-    left: 16px;
+    bottom: -10px;
+        right: 25px;
+        left: 25px;
+        font-size: 13px;
+        text-align: left;
 }
 
 .afbeeldingTitelBox {
@@ -36,4 +44,7 @@ body {
 .postInfo {
     color: #878787;
     font-size: 13px;
+}
+hr.divider {
+    border-top: 1px solid #878787;
 }

@@ -15,8 +15,8 @@
     <div class="contentContainer">
         <div class="artikelContainer">
             <?php
-            // ID statisch voor test doeleinden
-            $id = 1;
+            //Artikel ID uit de get halen.
+            $id = $_GET["artikelID"];
 
             $artikel = $conn->prepare("SELECT * FROM berichten WHERE berichtId = :id");
             $artikel->execute(['id' => $id]);
@@ -32,6 +32,9 @@
                 echo "Beeld: " .  $data["image_auteur"] . "</div><br>";
             }
             ?>
+        </div>
+        <div class="zijContainer">
+            <?php include 'includes/zijLijnArtikel.php'; ?>
         </div>
     </div>
 </body>
