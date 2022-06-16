@@ -16,7 +16,7 @@
         <div class="artikelContainer">
             <?php
             //Artikel ID uit de get halen.
-            $id = $_GET["artikelID"];
+            $id = $_GET["id"];
 
             $artikel = $conn->prepare("SELECT * FROM berichten WHERE berichtId = :id");
             $artikel->execute(['id' => $id]);
@@ -34,7 +34,7 @@
             ?>
         </div>
         <div class="zijContainer">
-            <?php include 'includes/zijLijnArtikel.php'; ?>
+            <?php include 'includes/zijbalk.php'; ?>
         </div>
     </div>
 </body>
