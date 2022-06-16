@@ -1,0 +1,15 @@
+#foot {
+    display: flex;
+    justify-content: center;
+}
+th, td {
+    width: 150px;
+    text-align: start;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+a {
+	text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
