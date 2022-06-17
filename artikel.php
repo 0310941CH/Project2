@@ -32,6 +32,7 @@
                 echo "Beeld: " .  $data["image_auteur"] . "</div><br>";
             }
             ?>
+            <hr class="divider">
         </div>
         <div class="zijContainer">
             <?php include 'includes/zijbalk.php'; ?>
