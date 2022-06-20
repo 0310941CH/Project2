@@ -86,7 +86,6 @@
     color: var(--darker-gray);
 
 }
-
 @media only screen and (max-width: 960px) {
     .footer-styling {
         display: flex;

@@ -24,10 +24,10 @@ include_once("config/config.php");
         <span>vul je e-mailadres in</span>
         <form class="emailInput" action="" method="POST">
             <input type="text" id="email" class="email" name="email"> <br>
-            <button type="submit" class="button" name="submitEmail">Ga Verder</button>
+            <button type="submit" class="button" name="submitEmail"><h3>Ga Verder</h3></button>
         </form>
-        <summary>
-        <span>Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" class="pijltje">
+        <summary class="summary">
+        <span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" class="pijltje">
         </summary>
         
         <h2>Hulp bij inloggen</h2>
