@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 12%);
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+}
+
+.content img a {
+    width: 80px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+nav #logo {
+    max-width: 65px;
+    max-height: 65px;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14.5px;
+    position: relative;
+    line-height: 1.4;
+    color: #1f2544;
+}
+
+.main-menu {
+    padding-left: 10px;
+}
+
+.content {
+    color: black;
+    font: 14.5px Arial, Helvetica, sans-serif;
+    background: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.content ul {
+    color: black;
+    font: 14.5px Arial, Helvetica, sans-serif;
+    width: 796.67px;
+    height: 31.26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+}
+
+.content ul li {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.content ul button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content ul button img {
+    max-width: 10px;
+    max-height: 10px;
+    margin-left: 5px;
+}
+
+.toolbar {
+    height: 31.26px;
+    width: 160px;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: right;
+    overflow-y: hidden;
+}
+
+.toolbar a {
+    font-family: "Noto Sans",sans-serif;
+    font-weight: 400;
+}
+
+.toolbar img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.toolbar2 {
+    height: 31.26px;
+    width: 150px;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+    overflow-y: hidden;
+}
+
+.toolbar2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-family: 'Noto Sans',sans-serif;
+    font-size: .9em;
+}
+
+.toolbar2 svg:first-child {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.toolbar2 svg {
+    max-width: 32px;
+    max-width: 32px;
+}
+
+.content2 {
+    color: black;
+    font: 14.5px Arial, Helvetica, sans-serif;
+    background: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 80px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.content2 .boven {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px rgb(238, 238, 238);
+}
+
+.content2 .boven .nulogo {
+    max-width: 32px;
+    max-height: 32px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.content2 .boven .logolinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content2 .boven .logolinks a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+
+.content2 .onder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    list-style: none;
+}
+
+.onder_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    list-style: none;
+}
+
+.content2 .onder button {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+.content2 .onder button li {
+    font-size: 14.5px;
+    color: #979797;
+}
+
+.content2 .onder button img {
+    margin-left: 5px;
+    max-width: 15px;
+    max-height: 15px;
+    align-items: center;
+    color: #979797;
+}
+
+.content2 .onder a {
+    padding: 7px 12px;
+    text-decoration: none;
+    font-size: 12.3px;
+    font-weight: 700;
+    color: #979797;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+
+.super-container {
+    width: 100%;
+    height: 180vh;
+    margin-top: 12vh;
+}
+
+.super-container button {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-self: flex-end;
+    bottom: -1px;
+    left: 6%;
+}
+
+.container {
+    margin: 0px auto 0;
+    display: flex;
+    width: 100%;
+    max-width: 1020px;
+    min-width: 280px;
+    height: 96%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#dropdown {
+    border: 0px;
+    background-color: white;
+    font: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#dropdown li {
+    font-size: 12px;
+    font: Arial, Helvetica, sans-serif;
+}
+
+#dropdown-content {
+    width: 100%;
+    height: 90vh;
+    display: none;
+    animation-name: down;
+    animation-duration: 0.8s;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 5;
+    position: fixed;
+    top: 12.1vh;
+    background-color: white;
+}
+
+.dropdown-info {
+    display: none;
+    align-self: flex-end;
+    height: 50px;
+    width: 100%;
+}
+
+.dropdown-info .nav_header_info {
+    float: left;
+    list-style: none;
+    margin-left: 34px;
+    margin-top: 14px;
+}
+
+.dropdown-info .nav_header_info a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #1f2544;
+}
+
+.container-dropdown-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 34px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.blokken-dropdown {
+    background-color: white;
+    width: 130px;
+    padding: 0;
+    text-decoration: none;
+    animation-name: down;
+    animation-duration: 0.6s;
+    overflow-y: hidden;
+}
+
+
+.blokken-dropdown li {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 700;
+}
+
+.blokken-dropdown a {
+    color: black;
+    text-decoration: none;
+    text-align: left;
+}
+
+.nav_subitem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.nav_subitem a {
+    text-decoration: none;
+    color: #1f2544;
+}
+
+.nav_item-item_default {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.nav_item-item_default a {
+    text-decoration: none;
+    color: #1f2544;
+}
+
+.nav_header {
+    font-weight: 700;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+
+.nav_header a {
+    text-decoration: none;
+    color: #1f2544;
+}
+
+.container-dropdown-content img {
+    display: none;
+}
+
+@keyframes down {
+    from {height: 0px}
+    to {height: 90vh;}
+}
+
+@keyframes up {
+    from {height: 90vh}
+    to {height: 0px;}
+}
+
+@media only screen and (max-width: 1275px) {
+    nav {
+        display: none;
+    }
+
+    .content2 {
+        display: flex;
+        position: fixed;
+    }
+
+    .blokken-dropdown-last {
+        display: none;
+    }
+
+    .dropdown-info {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-dropdown-content {
+        flex-direction: column;
+        width: 200px;
+    }
+
+    #dropdown-content {
+        justify-content: flex-start;
+    }
+
+    .nav_header a {
+        font-size: 18px;
+        width: 2500px;
+    }
+
+    .nav_header::before {
+        display: block;
+    }
+
+    .nav_subitem a {
+        font-size: 15px;
+    }
+
+    .blokken-dropdown {
+        width: 200px;
+        margin-top: 12px;
+    }
+
+    .container-dropdown-content img {
+        display: flex;
+    }
+
+    .nav_header::before {
+        background-image: url("https://www.nu.nl/static/img/atoms/images/logos/menu/algemeen.svg");
+    }
+}
+
+
+/*container*/
+.left_div {
+    width: 50%;
+    height: 90vh;
+    margin-left: 10px;
+}
+
+.right_div {
+    width: 40%;
+    height: 90vh;
+}
+
+.content_datum {
+    color: #1f2544;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.divider-vertical {
+    height: 20px;
+    width: 1px;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider-vertical_1 {
+    background-color: rgb(199, 199, 199);
+    width: 1px;
+    height: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.content_datum_svg {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.content_datum_svg svg {
+    max-width: 18px;
+    max-height: 18px;
+    align-self: center;
+}
+
+.datum {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    flex: 1 0 20%;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: auto;
+}
+
+.icon1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border: 1px solid #ffff;
+    border-radius: 0.5714285714285714em;
+}
+
+.icon1:hover {
+    border: 1px solid #1f2544;
+    border-radius: 0.5714285714285714em;
+}
+
+.icon1 svg {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+#text_icon {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.div-net-binnen {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.div-net-binnen:hover {
+    text-decoration: underline;
+}
+
+.div-net-binnen svg {
+    margin-left: 8px;
+}
+

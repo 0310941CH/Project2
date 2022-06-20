@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+}
+
+.superfooter {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    overflow-y: hidden;
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+}
+
+.footer {
+    margin: 0px auto 0;
+    width: 100%;
+    max-width: 1100px;
+    min-width: 280px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.blokken {
+    width: 111px;
+    height: 100%;
+    margin-bottom: 30px;
+    overflow-y: hidden;
+}
+
+.blokken:first-child {
+    padding: 0px;
+}
+
+.footer_subitem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.footer_subitem a {
+    text-decoration: none;
+    color: #1F2544;
+}
+
+.footer_header a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact_subitem a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact_header a {
+    text-decoration: none;
+}
+
+.allblokken {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.contact {
+    margin-bottom: 30px;
+    width: 25vh;
+}
+
+.contact a {
+    color: #1F2544;
+}
+
+.contact_subitem {
+    margin-top: 15px;
+}
+
+.footer2 {
+    display: flex;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social_footer {
+    width: 330px;
+    height: 24px;
+    display: flex;
+}
+
+.copyright_footer3 {
+    display: none;
+}
+
+.copyright p {
+    font-size: 14.5px;
+    color: #878787;
+}
+
+.footer3 {
+    display: none;
+}
+
+.social_icons_footer {
+    display: flex;
+    margin-left: 12px;
+}
+
+.icons_footer {
+    width: 24px;
+    height: 24px;
+    background-color: #c40000;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.icons_footer svg {
+    width: 14px;
+    height: 14px;
+    fill: white;
+}
+
+.help_div_footer {
+    display: none;
+}
+
+/*footer aanpassen*/
+@media only screen and (max-width: 1200px) {
+    .superfooter {
+        height: 520px;
+        border-top: solid 1px #eee;
+    }
+
+    .footer {
+        justify-content: space-evenly;
+    }
+
+    .footer_header {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .footer_subitem {
+        display: none;
+    }
+
+    .blokken {
+        height: 35px;
+        width: 150px;
+        margin-bottom: 1px;
+        padding-left: 0;
+    }
+
+    .allblokken {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer2 {
+        display: none;
+    }
+
+    .footer3 .footer_header {
+        overflow-y: hidden;
+    }
+
+    .footer3 {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-left: 7px;
+        margin-top: 15px;
+    }
+
+    .footer3 .social_footer {
+        height: 120px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .footer3 .social_footer p {
+        font-weight: 600;
+        margin-left: 5px;
+    }
+
+    .social_icons_footer {
+        margin-left: 0;
+    }
+
+    .copyright_footer3 {
+        display: flex;
+        margin-right: 7px;
+    }
+
+    .contact {
+        margin-top: 15px;
+    }
+
+    .icons_footer:first-child {
+        margin-left: 0;
+    }
+
+    .social_footer p:first-child {
+        margin-left: 0;
+    }
+
+    .social_footer {
+        width: 348px;
+    }
+}
+
+/*footer corrigeren*/
+@media only screen and (max-width: 800px) {
+    .allblokken {
+        margin-right: 0px;
+        width: 130px;
+    }
+
+    .footer3 {
+        margin-left: 0;
+        width: 30vh;
+    }
+
+    .social_footer {
+        width: 30vh;
+    }
+
+    .contact {
+        padding-left: none;
+    }
+
+    .footer3 p:last-child {
+        flex-wrap: wrap;
+        height: 80px;
+    }
+
+    .copyright_footer3 {
+        overflow-y: hidden;
+    }
+}
+
+/*Footer3 er weer onder op 600px*/
+@media only screen and (max-width: 600px) {
+    .footer3 {
+        display: none;
+    }
+
+    .footer2 {
+        display: flex;
+        height: 80px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+        border-top: none;
+    }
+
+    .superfooter {
+        height: 480px;
+    }
+
+    .footer {
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    .allblokken {
+        width: 50%;
+    }
+
+    .contact {
+        width: 50%;
+        padding-left: 0px;
+        margin-bottom: 0;
+        overflow-y: hidden;
+    }
+
+    .social_footer {
+        flex-direction: column;
+        width: 50%;
+        height: 50px;
+    }
+
+    .help_div_footer {
+        display: flex;
+        width: 50%;
+        height: 30px;
+    }
+
+    .footer2 p:last-child {
+        margin-left: 15px;
+    }
+}
