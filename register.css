@@ -1,3 +1,58 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Sharp Sans Display';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/SharpSansDispNo2-Bold.otf") format("opentype");
+}
+
+:root {
+    --dpg-yellow: #FFB12F;
+    --dpg-yellow-darker: #FFA510;
+    --dpg-yellow-light: #FFF5e0;
+    --dpg-error-background: hsl(4, 73%, 96%);
+    --dpg-error-background-dark: hsl(4, 73%, 63%);
+    --dpg-red: #FE6C59;
+    --error-red: #DF2114;
+    --dpg-success: #77C06B;
+    --dpg-success-on-yellow-light: #4c7b44;
+    --hover-blue: hsl(199, 39%, 90%);
+    --selected-blue: #008BC3;
+    --light-blue: #0486BE;
+    --dark-blue: #02405A;
+
+    --semi-trans-white: #F2F2F24C;
+    --light-gray: #B4B4B46B;
+
+    --white: #FFF;
+    --dpg-white: #F8F8F8;
+    --dpg-medium-grey: #E6E6E6;
+    --lighter-gray: #B4B4B4;
+    --gray: #777;
+    --dpg-muted-text: #666666;
+    --dpg-dark-mode-gray: #3D3D3D;
+    --semi-dark-gray: #333;
+    --dark-gray: #2D2D2D;
+    --darker-gray: #202020;
+    --black: #000;
+    --error-block: #FCEDEC;
+
+    --pswmeter: #EEE;
+}
+
 .nuImage {
     width: 48px;
     height: 48px;
@@ -9,4 +64,66 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+/* Styling Footer Werkte anders niet met styling want moet scrollable bij deze zijn */
+
+.footer-styling {
+    font-size: 14px;
+    display: flex;
+    position: absolute;
+    padding: 12px;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: -15;
+    left: 0;
+    width: 98%;
+}
+
+.left {
+    display: flex;
+    gap: 40px;
+}
+
+.link-component {
+    font-family: Montserrat;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--darker-gray);
+    text-decoration: underline;
+}
+
+.dpgRechten {
+    font-family: Montserrat;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--darker-gray);
+
+}
+
+@media only screen and (max-width: 960px) {
+    .footer-styling {
+        display: flex;
+        background-color: var(--dark-gray);
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -10;
+    }
+
+    .link-component {
+        font-family: Montserrat;
+        cursor: pointer;
+        display: inline-block;
+        color: var(--white);
+        text-decoration: underline;
+    }
+
+    .dpgRechten {
+        font-family: Montserrat;
+        cursor: pointer;
+        display: inline-block;
+        color: var(--white);
+    }
 }

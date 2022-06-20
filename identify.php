@@ -13,18 +13,28 @@ include_once("config/config.php");
     <title>Nu.NL login</title>
     <link rel="stylesheet" href="identify.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 
 <body>
 <?php include("header.php") ?>
     <div class="column">
         <img src="images/Nu.svg" alt="Nu" class="nuImage">
-        <h3>Login of maak je account aan</h3>
+        <h1>Login of maak je account aan</h1>
         <span>vul je e-mailadres in</span>
-        <form action="" method="POST">
-            <input type="text" id="email" name="email"> <br>
+        <form class="emailInput" action="" method="POST">
+            <input type="text" id="email" class="email" name="email"> <br>
             <button type="submit" class="button" name="submitEmail">Ga Verder</button>
         </form>
+        <summary>
+        <span>Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" class="pijltje">
+        </summary>
+        
+        <h2>Hulp bij inloggen</h2>
+
+        <a href="https://login.dpgmedia.nl/password/reset?client_id=nu-site-web">Ik ben mijn wachtwoord vergeten</a> <br>
+        <a href="">Ik weet niet of ik al een account heb</a> <br>
+        <a href="">Ik logde eerder in via Facebook of Google</a> <br>
     </div>
     <?php
     //PHP Gedeelte
@@ -50,4 +60,6 @@ include_once("config/config.php");
         }
     }
     ?>
+
+    <?php include("footer.php") ?>
 </body>

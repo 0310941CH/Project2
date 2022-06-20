@@ -13,6 +13,7 @@ include_once("config/config.php");
     <title>Nu.NL Login</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 
 <body>
@@ -65,4 +66,6 @@ include_once("config/config.php");
         }
     }
     ?>
+
+<?php include("footer.php") ?>
 </body>

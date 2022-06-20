@@ -53,44 +53,61 @@
     --pswmeter: #EEE;
 }
 
-.nuImage {
-    width: 48px;
-    height: 48px;
-}
-.column {
-    font-family: Montserrat; 
+.footer-styling {
+    font-size: 14px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    padding: 12px;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    width: 98%;
 }
 
-.pijltje {
-   transform: rotate(270deg);
+.left {
+    display: flex;
+    gap: 40px;
 }
 
-.column > h1 {
-    font-family: Sharp Sans Display, Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 32px auto 16px;
-    text-align: center;
+.link-component {
+    font-family: Montserrat;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--darker-gray);
+    text-decoration: underline;
 }
-.button {
-    background-color: var(--dpg-yellow);
-    border-color: var(--white);
-    width: 310px;
-    height: 45px;
+
+.dpgRechten {
+    font-family: Montserrat;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--darker-gray);
+
 }
-.emailInput {
-    display: flex;
-    flex-direction: column;
-    column-gap: -2px;
-    margin: auto;
-}
-.email {
-    width: 310px;
-    height: 45px;
-    
+
+@media only screen and (max-width: 960px) {
+    .footer-styling {
+        display: flex;
+        background-color: var(--dark-gray);
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .link-component {
+        font-family: Montserrat;
+        cursor: pointer;
+        display: inline-block;
+        color: var(--white);
+        text-decoration: underline;
+    }
+
+    .dpgRechten {
+        font-family: Montserrat;
+        cursor: pointer;
+        display: inline-block;
+        color: var(--white);
+    }
 }

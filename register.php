@@ -65,6 +65,7 @@ include_once("config/config.php");
             </p>
         </form>
     </div>
+    <?php include("footer.php") ?>
 
     <?php
     //PHP Gedeelte voor inserten etc
@@ -100,4 +101,5 @@ include_once("config/config.php");
         }
     }
     ?>
+
 </body>
