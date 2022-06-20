@@ -1,28 +1,27 @@
 <head>
     <link rel="stylesheet" href="./style/zijBalk.css">
 </head>
-<h1>Net Binnen <img src="./images/netBinnenIcon.svg" alt="Net Binnen icon"></h1>
-<ul>
-    <?php
-    //Vooraf gedefinieerde variables
-    $limit = 4;
+<h1 class="kopTitel">Net Binnen <img src="./images/netBinnenIcon.svg" alt="Net Binnen icon"></h1>
+<?php
+//Vooraf gedefinieerde variables
+$limit = 4;
 
-    $artikel = $conn->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
-    $artikel->bindValue('limit', $limit, PDO::PARAM_INT);
-    $artikel->execute();
-    $data = $artikel->fetchAll();
-    foreach ($data as $artikel) {
-        $datumFormat = date("h:i", strtotime($artikel["datum_toegevoegd"]));
-        echo "<div class='netBinnenWrapper'>";
-        echo "<p class='datumArtikel'>" . $datumFormat . "</p> ";
-        echo "<a class='titelArtikel' href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $artikel["titel"] . "</a><br>";
-        echo "</div>";
-    }
-    ?>
-</ul>
+$artikel = $conn->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
+$artikel->bindValue('limit', $limit, PDO::PARAM_INT);
+$artikel->execute();
+$data = $artikel->fetchAll();
+foreach ($data as $artikel) {
+    $datumFormat = date("h:i", strtotime($artikel["datum_toegevoegd"]));
+    echo "<div class='netBinnenWrapper'>";
+    echo "<p class='datumArtikel'>" . $datumFormat;
+    echo "<a class='titelArtikel' href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $artikel["titel"] . "</a><br>";
+    echo "</p></div>";
+}
+?>
 <hr class="divider">
-
-<h1>Nieuwsvideo's</h1>
+<a href="https://www.nu.nl/videos/nieuwsvideos">
+    <h1 class="kopTitel">Nieuwsvideo's</h1>
+</a>
 <div class="videoContainer">
     <div class="videoLinks">
         <div class="videoWrapper">
@@ -56,6 +55,6 @@
 </div>
 
 <a href="https://shop.nu.nl/product/fletcher-hotels?&utm_source=nushop&utm_medium=cms_banner&utm_campaign=fletcherjuni">
-    <h1>NUshop</h1>
+    <h1 class="kopTitel">NUshop</h1>
     <img src="./images/extra/nuShop2.png" class="shopAfbeelding" alt="NU Shop Fletcher Hotels">
 </a>

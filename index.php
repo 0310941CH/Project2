@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-    <link type="text/css" href="/static/bundles/css/app.fbd914c7.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/Nu-nl-logo.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="script.js"></script>
     <title>NU - Het laatste nieuws het eerst op NU.nl</title>
 </head>
 
 <body>
-    <?php require_once("nav.html"); ?>
+    <?php require_once("./includes/nav.php"); ?>
     <div class="super-container">
         <div class="container">
             <div class="left_div">
@@ -158,19 +152,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="div-net-binnen">
-                    <h2>Net binnen</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1em" width="1em" aria-labelledby="" role="presentation" data-v-1dd6691c="">
-                        <title lang="nl" data-v-1dd6691c=""></title>
-                        <g data-v-1dd6691c="">
-                            <path fill="currentColor" d="M20.177 4.006C22.4 5.776 24 8.37 24 12.056c0 3.76-1.315 5.902-3.817 7.935a.75.75 0 11-.945-1.165c2.185-1.774 3.263-3.531 3.263-6.77 0-3.163-1.36-5.367-3.258-6.877a.75.75 0 01.934-1.174zm-16.354 0a.75.75 0 11.933 1.172C2.86 6.69 1.499 8.894 1.499 12.057c0 3.239 1.08 4.996 3.263 6.77a.75.75 0 01-.945 1.165C1.313 17.958 0 15.815 0 12.056c0-3.688 1.6-6.28 3.823-8.051zm13.35 3.359c1.54 1.2 2.329 2.778 2.329 4.669 0 1.9-.796 3.445-2.351 4.568a.749.749 0 11-.879-1.216c1.167-.842 1.73-1.937 1.73-3.352 0-1.425-.57-2.567-1.752-3.49a.75.75 0 01.923-1.18zm-10.345 0a.748.748 0 11.922 1.18c-1.183.922-1.753 2.064-1.753 3.489 0 1.415.564 2.51 1.73 3.352a.749.749 0 11-.878 1.216c-1.555-1.126-2.351-2.67-2.351-4.568 0-1.89.789-3.468 2.329-4.67zm5.167 1.65a2.998 2.998 0 110 5.996 2.998 2.998 0 110-5.997z" data-v-1dd6691c=""></path>
-                        </g>
-                    </svg>
-                </div>
+                <?php include 'includes/zijbalk.php'; ?>
             </div>
         </div>
     </div>
-    <?php require 'footer.html' ?>
+    <?php require './includes/footer.php' ?>
 </body>
 
 </html>
