@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.artikelContainer {
+    width: 100%;
+        max-width: 600px;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+.artikelAfbeelding {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.artikelTitel {
+    position: absolute;
+    bottom: -10px;
+        right: 25px;
+        left: 25px;
+        font-size: 13px;
+        text-align: left;
+}
+
+.afbeeldingTitelBox {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.samenvatting {
+    font-weight: bold;
+}
+
+.postInfo {
+    color: #878787;
+    font-size: 13px;
+}
+/* Vergroot het artikel tot de max width bij schermen kleiner dan 800px breed */
+@media only screen and (max-width: 800px) {
+    .artikelContainer {
+        max-width: 100%;
+    }
+}
