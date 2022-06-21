@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("config/config.php");
+include_once("./config/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,15 +11,15 @@ include_once("config/config.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nu.NL Login</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/iFooter.css">
 </head>
 
 <body>
-    <?php include("header.php") ?>
+    <?php include("./includes/header.php") ?>
     <div class="column">
-        <img src="images/Nu.svg" alt="Nu" class="nuImage">
+        <img src="./images/Nu.svg" alt="Nu" class="nuImage">
         <h2>Inloggen op nu.nl</h2>
         <span>Vul je wachtwoord in voor:</span>
         <span><?php echo $_SESSION['email'] ?></span>
@@ -67,5 +67,5 @@ include_once("config/config.php");
     }
     ?>
 
-<?php include("footer.php") ?>
+    <?php include("./includes/iFooter.php") ?>
 </body>
