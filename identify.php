@@ -25,7 +25,7 @@ include_once("config/config.php");
         <h1>Log in of maak je account aan</h1>
         <span>Vul je e-mailadres in</span>
         <form class="emailInput" action="" method="POST">
-            <input type="text" id="email" class="email" name="email"> <br>
+            <input type="text" id="email" class="email" name="email" placeholder="E-mailadress"> <br>
             <button type="submit" class="button" name="submitEmail"><h3>Ga Verder</h3></button>
         </form>
         <summary class="summary">
