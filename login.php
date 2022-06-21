@@ -20,15 +20,15 @@ include_once("./config/config.php");
     <?php include("./includes/header.php") ?>
     <div class="column">
         <img src="./images/Nu.svg" alt="Nu" class="nuImage">
-        <h2>Inloggen op nu.nl</h2>
+        <h2 class="titelTekst">Inloggen op nu.nl</h2>
         <span>Vul je wachtwoord in voor:</span>
         <span><?php echo $_SESSION['email'] ?></span>
         <a class="tekst" href="identify.php">Wijzig e-mailadres</a>
 
         <form action="" method="POST">
-            <input type="password" name="password"> <br>
+            <input class="inputVeld" type="password" name="password"> <br>
             <a class="tekst" href="">Wachtwoord vergeten</a><br>
-            <button type="submit" name="submitLogin">Log in</button>
+            <button class="button" type="submit" name="submitLogin">Log in</button>
         </form>
     </div>
 

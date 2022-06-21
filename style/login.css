@@ -70,22 +70,37 @@
     color: inherit;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 90%;
-    height: 4em;
-    border-width: thin;
+.inputVeld {
+    width: 340px;
+    height: 50px;
+    margin-top: 12px;
     border-radius: 3px;
-    border-color: var(--dpg-medium-grey);
-    border-style: solid;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-    outline: 1px solid var(--dpg-yellow);
-    border-color: white;
+    border: solid 1px var(--dpg-medium-grey);
+        padding-left: 10px;
+    }
+    
+    .inputVeld:focus {
+        outline: 1px solid var(--dpg-yellow);
+    }
+    
+    .button:hover {
+        background-color: var(--dpg-yellow-darker);
+        cursor: pointer;
+    }
+    
+    .button {
+        background-color: var(--dpg-yellow);
+        border: none;
+        width: 340px;
+        height: 54px;
+    }
+    
+    .button h3 {
+        color: var(--darker-gray);
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+    }
+        .titelTekst {
+            margin: 15px;
 }
