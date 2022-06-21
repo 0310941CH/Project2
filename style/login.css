@@ -52,6 +52,9 @@
 
     --pswmeter: #EEE;
 }
+body {
+    overflow: hidden;
+}
 .nuImage {
     width: 48px;
     height: 48px;
@@ -77,30 +80,34 @@
     border-radius: 3px;
     border: solid 1px var(--dpg-medium-grey);
         padding-left: 10px;
-    }
+}
+
+.inputVeld:focus {
+    outline: 1px solid var(--dpg-yellow);
+}
     
-    .inputVeld:focus {
-        outline: 1px solid var(--dpg-yellow);
-    }
+.button:hover {
+    background-color: var(--dpg-yellow-darker);
+    cursor: pointer;
+}
     
-    .button:hover {
-        background-color: var(--dpg-yellow-darker);
-        cursor: pointer;
-    }
+.button {
+    background-color: var(--dpg-yellow);
+    border: none;
+    width: 340px;
+    height: 54px;
+}
     
-    .button {
-        background-color: var(--dpg-yellow);
-        border: none;
-        width: 340px;
-        height: 54px;
-    }
-    
-    .button h3 {
-        color: var(--darker-gray);
-        font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-    }
-        .titelTekst {
-            margin: 15px;
+.button h3 {
+    color: var(--darker-gray);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.titelTekst {
+    margin: 15px;
+}
+.error {
+    color: var(--dpg-red);
 }

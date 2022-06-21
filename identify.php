@@ -19,41 +19,7 @@ include_once("config/config.php");
 </head>
 
 <body>
-<?php include("includes/header.php") ?>
-    <div class="column">
-        <img src="images/Nu.svg" alt="Nu" class="nuImage">
-        <h1>Log in of maak je account aan</h1>
-        <span>Vul je e-mailadres in</span>
-        <form class="emailInput" action="" method="POST">
-            <input type="text" id="email" class="email" name="email" placeholder="E-mailadress"> <br>
-            <button type="submit" class="button" name="submitEmail"><h3>Ga Verder</h3></button>
-        </form>
-        <summary class="summary">
-        <button onclick="dropdownDPG()" class="dropdown_button"><span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" id="pijltje"></button>
-        </summary>
-
-        <div id="dropdown_DPG">
-            <div class="dropdown_DPG_content">
-                <h1>Over DPG Media account</h1>
-                <p>Met een DPG Media account kun je inloggen op de websites en in de apps van deze merken van DPG Media:</p>
-                <ul>
-                    <li>NU.nl, het AD, de Volkskrant, Trouw, Het Parool, de Stentor, Tubantia, de Gelderlander, het ED, Brabants Dagblad, BN DeStem en de PZC</li>
-                    <li>Libelle, Veronica Superguide, Story, Nouveau, Kek Mama, AutoWeek, Ouders van Nu, vtwonen college, Stijlvol Wonen</li>
-                    <li>Tijdschrift.nl, Reclamefolder.nl</li>
-                    <li>Qmusic, Joe</li>
-                </ul>
-                <p>Wanneer je inlogt, krijg je toegang tot bepaalde extra's of mogelijkheden. Deze verschillen per merk.</p>
-                <p>Heb je een abonnement op een van de nieuwsmerken? Dan krijg je onbeperkt toegang tot alle artikelen en video's van dat nieuwsmerk.</p>
-            </div>
-        </div>
-        
-        <div class="help_login">
-            <h2>Hulp bij inloggen</h2>
-            <a href="https://login.dpgmedia.nl/password/reset?client_id=nu-site-web">Ik ben mijn wachtwoord vergeten</a> <br>
-            <a href="">Ik weet niet of ik al een account heb</a> <br>
-            <a href="">Ik logde eerder in via Facebook of Google</a> <br>
-        </div>
-    </div>
+    <?php include("includes/header.php") ?>
     <?php
     //PHP Gedeelte
     if (isset($_POST['submitEmail'])) {
@@ -75,9 +41,52 @@ include_once("config/config.php");
                 $_SESSION['email'] = $emailAdress;
                 header("Location: login.php");
             }
+        } else {
+            $error = "Dit veld is verplicht";
         }
     }
     ?>
+    <div class="column">
+        <img src="images/Nu.svg" alt="Nu" class="nuImage">
+        <h1>Log in of maak je account aan</h1>
+        <span>Vul je e-mailadres in</span>
+        <form class="emailInput" action="" method="POST">
+            <input type="email" id="email" class="email" name="email" placeholder="E-mailadress"> <br>
+            <?php if (isset($error)) {
+                echo '<p class="error" >' . $error . "</p>";
+            }
+            ?>
+            <button type="submit" class="button" name="submitEmail">
+                <h3>Ga Verder</h3>
+            </button>
+        </form>
+        <summary class="summary">
+            <button onclick="dropdownDPG()" class="dropdown_button"><span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" id="pijltje"></button>
+        </summary>
+
+        <div id="dropdown_DPG">
+            <div class="dropdown_DPG_content">
+                <h1>Over DPG Media account</h1>
+                <p>Met een DPG Media account kun je inloggen op de websites en in de apps van deze merken van DPG Media:</p>
+                <ul>
+                    <li>NU.nl, het AD, de Volkskrant, Trouw, Het Parool, de Stentor, Tubantia, de Gelderlander, het ED, Brabants Dagblad, BN DeStem en de PZC</li>
+                    <li>Libelle, Veronica Superguide, Story, Nouveau, Kek Mama, AutoWeek, Ouders van Nu, vtwonen college, Stijlvol Wonen</li>
+                    <li>Tijdschrift.nl, Reclamefolder.nl</li>
+                    <li>Qmusic, Joe</li>
+                </ul>
+                <p>Wanneer je inlogt, krijg je toegang tot bepaalde extra's of mogelijkheden. Deze verschillen per merk.</p>
+                <p>Heb je een abonnement op een van de nieuwsmerken? Dan krijg je onbeperkt toegang tot alle artikelen en video's van dat nieuwsmerk.</p>
+            </div>
+        </div>
+
+        <div class="help_login">
+            <h2>Hulp bij inloggen</h2>
+            <a href="https://login.dpgmedia.nl/password/reset?client_id=nu-site-web">Ik ben mijn wachtwoord vergeten</a> <br>
+            <a href="">Ik weet niet of ik al een account heb</a> <br>
+            <a href="">Ik logde eerder in via Facebook of Google</a> <br>
+        </div>
+    </div>
+
 
     <?php include("includes/iFooter.php") ?>
 </body>

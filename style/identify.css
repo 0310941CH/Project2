@@ -53,6 +53,9 @@
     --pswmeter: #EEE;
 }
 
+body {
+    overflow: hidden;
+}
 .nuImage {
     width: 48px;
     height: 48px;
