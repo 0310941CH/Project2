@@ -20,5 +20,5 @@ CREATE TABLE `berichten` (
     auteur varchar(100) NOT NULL,
     images varchar(255) NOT NULL,
     image_auteur varchar(255) NOT NULL,
-    categorie ENUM('Binnenland', 'Buitenland', 'Politiek', 'Klimaat', 'Video', 'Geld', 'Werk', 'Ondernemen', 'Onderweg', 'Voetbal', 'Formule1', 'SportOverig', 'Games', 'Reviews', 'FilmsEnSeries', 'Muziek', 'BoekEnCultuur', 'Koningshuis') NOT NULL
+    categorie ENUM('Binnenland', 'Buitenland', 'Politiek', 'Klimaat') NOT NULL
 );
