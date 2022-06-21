@@ -59,14 +59,14 @@
     margin-top: 20px;
 }
 .column {
-    font-family: Montserrat; 
+    font-family: "Montserrat", Arial, Helvetica, sans-serif; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.pijltje {
+#pijltje {
    transform: rotate(270deg);
    width: 20px;
    height: 10px;
@@ -76,40 +76,49 @@
 }
 
 .column > h1 {
-    font-family: Sharp Sans Display, Arial, sans-serif;
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1;
     margin: 32px auto 16px;
     text-align: center;
+
 }
 .button {
-    font-family: Montserrat, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 900;
     background-color: var(--dpg-yellow);
     border: none;
     width: 340px;
-    height: 60px;
+    height: 54px;
 }
+
+.button h3 {
+    color: var(--darker-gray);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
 .emailInput {
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 .email {
-    width: 330px;
-    height: 45px;
-    margin-bottom: -10px;
+    width: 340px;
+    height: 50px;
+    margin-top: 12px;
     border-radius: 3px;
     border-color: var(--semi-trans-white);
 }
 .email:focus {
     outline: 1px solid var(--dpg-yellow);
 }
-button:hover {
+
+.button:hover {
     background-color: var(--dpg-yellow-darker);
+    cursor: pointer;
 }
+
 .dpgmedia {
     display: flex;
     margin: 16px auto 24px auto;
@@ -122,4 +131,57 @@ button:hover {
 .summary {
     display: flex;
     flex-direction: row;
+}
+
+#dropdown_DPG {
+    width: 90vh;
+    display: none;
+    justify-content: center;
+}
+
+.dropdown_DPG_content h1 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--darker-gray);
+}
+
+.dropdown_DPG_content {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.dropdown_DPG_content p {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif; 
+    color: var(--darker-gray);
+    font-weight: 200;
+}
+
+.dropdown_DPG_content li {
+    text-align: left;
+    font-weight: 200;
+}
+
+.dropdown_button {
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    height: 18px;
+    margin-top: 20px;
+}
+
+.help_login {
+    text-align: center;
+    background-color: var(--dpg-white);
+    height: 220px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.help_login a {
+    margin-top: 5px;
+    color: var(--darker-gray);
 }
