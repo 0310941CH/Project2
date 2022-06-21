@@ -60,7 +60,7 @@ include_once("config/config.php");
         if ($_POST['email'] != "") {
             $emailAdress = $_POST['email'];
 
-            $execute = $conn->prepare('SELECT * FROM users WHERE email=:email');
+            $execute = $pdo->prepare('SELECT * FROM users WHERE email=:email');
 
             $data = [
                 ":email" => $emailAdress,
