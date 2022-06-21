@@ -11,6 +11,7 @@ nav {
     justify-content: center;
     position: fixed;
     background-color: white;
+    z-index: 1;
 }
 
 .content img a {
@@ -90,7 +91,7 @@ body {
 }
 
 .toolbar a {
-    font-family: "Noto Sans",sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-weight: 400;
 }
 
@@ -114,7 +115,7 @@ body {
     text-decoration: none;
     color: black;
     font-weight: 400;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: .9em;
 }
 
@@ -169,7 +170,7 @@ body {
     color: black;
     font-weight: 700;
     text-decoration: none;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 .content2 .onder {
@@ -219,7 +220,7 @@ body {
     font-size: 12.3px;
     font-weight: 700;
     color: #979797;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 .super-container {
@@ -350,7 +351,7 @@ body {
 
 .nav_header {
     font-weight: 700;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 .nav_header a {
@@ -363,13 +364,23 @@ body {
 }
 
 @keyframes down {
-    from {height: 0px}
-    to {height: 90vh;}
+    from {
+        height: 0px
+    }
+
+    to {
+        height: 90vh;
+    }
 }
 
 @keyframes up {
-    from {height: 90vh}
-    to {height: 0px;}
+    from {
+        height: 90vh
+    }
+
+    to {
+        height: 0px;
+    }
 }
 
 @media only screen and (max-width: 1275px) {
@@ -438,12 +449,12 @@ body {
 
 .right_div {
     width: 40%;
-    height: 90vh;
+    height: auto;
 }
 
 .content_datum {
     color: #1f2544;
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     display: flex;
     flex-direction: row;
@@ -537,4 +548,3 @@ body {
 .div-net-binnen svg {
     margin-left: 8px;
 }
-

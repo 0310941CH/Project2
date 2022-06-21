@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Sharp Sans Display';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/SharpSansDispNo2-Bold.otf") format("opentype");
+}
+
+:root {
+    --dpg-yellow: #FFB12F;
+    --dpg-yellow-darker: #FFA510;
+    --dpg-yellow-light: #FFF5e0;
+    --dpg-error-background: hsl(4, 73%, 96%);
+    --dpg-error-background-dark: hsl(4, 73%, 63%);
+    --dpg-red: #FE6C59;
+    --error-red: #DF2114;
+    --dpg-success: #77C06B;
+    --dpg-success-on-yellow-light: #4c7b44;
+    --hover-blue: hsl(199, 39%, 90%);
+    --selected-blue: #008BC3;
+    --light-blue: #0486BE;
+    --dark-blue: #02405A;
+
+    --semi-trans-white: #F2F2F24C;
+    --light-gray: #B4B4B46B;
+
+    --white: #FFF;
+    --dpg-white: #F8F8F8;
+    --dpg-medium-grey: #E6E6E6;
+    --lighter-gray: #B4B4B4;
+    --gray: #777;
+    --dpg-muted-text: #666666;
+    --dpg-dark-mode-gray: #3D3D3D;
+    --semi-dark-gray: #333;
+    --dark-gray: #2D2D2D;
+    --darker-gray: #202020;
+    --black: #000;
+    --error-block: #FCEDEC;
+
+    --pswmeter: #EEE;
+}
+
+.nuImage {
+    width: 48px;
+    height: 48px;
+    margin-top: 20px;
+}
+.column {
+    font-family: Montserrat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pijltje {
+   transform: rotate(270deg);
+   width: 20px;
+   height: 10px;
+   display: flex;
+    margin: 16px auto 24px auto;
+    column-gap: 20px;
+}
+
+.column > h1 {
+    font-family: Sharp Sans Display, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 32px auto 16px;
+    text-align: center;
+}
+.button {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: var(--dpg-yellow);
+    border: none;
+    width: 340px;
+    height: 60px;
+}
+.emailInput {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.email {
+    width: 330px;
+    height: 45px;
+    margin-bottom: -10px;
+    border-radius: 3px;
+    border-color: var(--semi-trans-white);
+}
+.email:focus {
+    outline: 1px solid var(--dpg-yellow);
+}
+button:hover {
+    background-color: var(--dpg-yellow-darker);
+}
+.dpgmedia {
+    display: flex;
+    margin: 16px auto 24px auto;
+    column-gap: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.summary {
+    display: flex;
+    flex-direction: row;
+}

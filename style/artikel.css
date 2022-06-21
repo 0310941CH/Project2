@@ -5,6 +5,10 @@ body {
 .contentContainer {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 .artikelContainer {
@@ -31,6 +35,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
+    overflow: hidden;
 }
 
 .samenvatting {
