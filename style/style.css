@@ -548,3 +548,48 @@ body {
 .div-net-binnen svg {
     margin-left: 8px;
 }
+
+@media only screen and (max-width: 1050px) {
+    .right_div {
+        margin-right: 40px;
+        width: 35%;
+    }
+
+    .container {
+        margin: 0px 10px;
+    }
+
+    .icon1 p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .icon1 p {
+        font-size: 9px;
+    }
+    .right_div {
+        margin-right: 65px;
+        width: 33%;
+    }
+
+    .icon1 svg {
+        max-width: 18px;
+        max-height: 18px;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .right_div {
+        margin-right: 40px;
+        width: 40%;
+    }
+
+    .icons {
+        gap: 3px;
+    }
+
+    .icon1 p {
+        font-size: 11px;
+    }
+}

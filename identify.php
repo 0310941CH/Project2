@@ -12,13 +12,14 @@ include_once("config/config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/Nu-nl-logo.png">
     <title>Inloggen | nu.nl</title>
-    <link rel="stylesheet" href="identify.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style/identify.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/iFooter.css">
+    <script src="js/identify_script.js"></script>
 </head>
 
 <body>
-<?php include("header.php") ?>
+<?php include("includes/header.php") ?>
     <div class="column">
         <img src="images/Nu.svg" alt="Nu" class="nuImage">
         <h1>Log in of maak je account aan</h1>
@@ -77,7 +78,6 @@ include_once("config/config.php");
         }
     }
     ?>
-    <script src="identify_script.js"></script>
 
-    <?php include("footer.php") ?>
+    <?php include("includes/iFooter.php") ?>
 </body>
