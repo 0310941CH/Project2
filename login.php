@@ -23,11 +23,11 @@ include_once("./config/config.php");
         <h2>Inloggen op nu.nl</h2>
         <span>Vul je wachtwoord in voor:</span>
         <span><?php echo $_SESSION['email'] ?></span>
-        <a href="">Wijzig e-mailadres</a>
+        <a class="tekst" href="identify.php">Wijzig e-mailadres</a>
 
         <form action="" method="POST">
             <input type="password" name="password"> <br>
-            <a href="">Wachtwoord vergeten</a><br>
+            <a class="tekst" href="">Wachtwoord vergeten</a><br>
             <button type="submit" name="submitLogin">Log in</button>
         </form>
     </div>
