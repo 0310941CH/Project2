@@ -28,6 +28,9 @@
                         </div>
                         <p>Het laatste nieuws het eerst op NU.nl</p>
                     </div>
+                    <!--! Hier beginnen de artikelen -->
+
+                    <!--! Hier eindigen de artikelen -->
                     <div class="content_datum_svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
