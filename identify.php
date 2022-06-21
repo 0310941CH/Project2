@@ -11,25 +11,27 @@ include_once("config/config.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nu.NL login</title>
-    <link rel="stylesheet" href="identify.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./style/identify.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/iFooter.css">
 </head>
 
 <body>
-<?php include("header.php") ?>
+    <?php include("./includes/header.php") ?>
     <div class="column">
         <img src="images/Nu.svg" alt="Nu" class="nuImage">
         <h1>Login of maak je account aan</h1>
         <span>vul je e-mailadres in</span>
         <form class="emailInput" action="" method="POST">
             <input type="text" id="email" class="email" name="email"> <br>
-            <button type="submit" class="button" name="submitEmail"><h3>Ga Verder</h3></button>
+            <button type="submit" class="button" name="submitEmail">
+                <h3>Ga Verder</h3>
+            </button>
         </form>
         <summary class="summary">
-        <span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" class="pijltje">
+            <span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" class="pijltje">
         </summary>
-        
+
         <h2>Hulp bij inloggen</h2>
 
         <a href="https://login.dpgmedia.nl/password/reset?client_id=nu-site-web">Ik ben mijn wachtwoord vergeten</a> <br>
@@ -61,5 +63,5 @@ include_once("config/config.php");
     }
     ?>
 
-    <?php include("footer.php") ?>
+    <?php include("./includes/iFooter.php") ?>
 </body>

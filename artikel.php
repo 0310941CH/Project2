@@ -17,7 +17,7 @@
             //Artikel ID uit de get halen.
             $id = $_GET["id"];
 
-            $artikel = $conn->prepare("SELECT * FROM berichten WHERE berichtId = :id");
+    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE berichtId = :id");
             $artikel->execute(['id' => $id]);
             $artikelInfo = $artikel->fetchAll();
             foreach ($artikelInfo as $data) {

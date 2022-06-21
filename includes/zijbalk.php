@@ -6,7 +6,7 @@
 //Vooraf gedefinieerde variables
 $limit = 4;
 
-$artikel = $conn->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
+$artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
 $artikel->bindValue('limit', $limit, PDO::PARAM_INT);
 $artikel->execute();
 $data = $artikel->fetchAll();

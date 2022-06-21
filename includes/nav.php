@@ -60,7 +60,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.646 20.646a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0Z" fill="#fff"></path>
                     </g>
                 </svg>
-                <a href="">Inloggen</a>
+                <a href="identify.php">Inloggen</a>
             </div>
         </div>
     </nav>
