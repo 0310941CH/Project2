@@ -54,7 +54,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .nuImage {
     width: 48px;
