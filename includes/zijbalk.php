@@ -3,6 +3,7 @@
 </head>
 <h1 class="kopTitel">Net Binnen <img src="./images/netBinnenIcon.svg" alt="Net Binnen icon"></h1>
 <?php
+<<<<<<< HEAD
 //Vooraf gedefinieerde variables
 $limit = 4;
 
@@ -11,6 +12,15 @@ $artikel->bindValue('limit', $limit, PDO::PARAM_INT);
 $artikel->execute();
 $data = $artikel->fetchAll();
 foreach ($data as $artikel) {
+=======
+$limit = 4; //Hieronder gebruikt variable om de limit aan te kunnen geven in select statement.
+
+$artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit"); // Selecteer 4 berichten op uit de database, van hoog naar laag geselecteerd op berichtid.
+$artikel->bindValue('limit', $limit, PDO::PARAM_INT); // verbind prepared statement :limit aan de variable $limit.
+$artikel->execute();
+$data = $artikel->fetchAll(); // Haal de geselecteerde data op.
+foreach ($data as $artikel) { // Loop door de data en echo deze op de pagina.
+>>>>>>> artikel
     $datumFormat = date("h:i", strtotime($artikel["datum_toegevoegd"]));
     echo "<div class='netBinnenWrapper'>";
     echo "<p class='datumArtikel'>" . $datumFormat;

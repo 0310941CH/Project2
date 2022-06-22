@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Navbar includen in de pagina-->
     <?php require_once("./includes/nav.php"); ?>
     <div class="contentContainer">
         <div class="artikelContainer">
@@ -17,10 +18,10 @@
             //Artikel ID uit de get halen.
             $id = $_GET["id"];
 
-    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE berichtId = :id");
+            $artikel = $pdo->prepare("SELECT * FROM berichten WHERE berichtId = :id"); //Selecteer alle gegevens uit tabel berichten waar het ID van de rij gelijk is aan de meegegeven variable.
             $artikel->execute(['id' => $id]);
-            $artikelInfo = $artikel->fetchAll();
-            foreach ($artikelInfo as $data) {
+            $artikelInfo = $artikel->fetchAll(); //Haal alle gegevens op.
+            foreach ($artikelInfo as $data) { //Loop door de gegevens en echo deze op de pagina.
                 echo "<div class='afbeeldingTitelBox'><img class='artikelAfbeelding' src='./images/artikelAfbeelding/" . $data['images'] . "' alt='Artikel afbeelding'>";
                 echo "<div class='artikelTitel'><h1>" . $data["titel"] . "</h1><br></div></div>";
                 echo "<div class='postInfo'>" . $data["datum_toegevoegd"] . "<br>";
@@ -33,10 +34,12 @@
             ?>
             <hr class="divider">
         </div>
+        <!-- zij balk includen in de pagina-->
         <div class="zijContainer">
             <?php include 'includes/zijbalk.php'; ?>
         </div>
     </div>
+    <!-- footer includen in de pagina-->
     <?php include 'includes/footer.php'; ?>
 </body>
 
