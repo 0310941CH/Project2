@@ -1,10 +1,15 @@
 .zijContainer {
-    width: 40%;
-    max-width: 350px;
+    width: 35%;
 }
 
-hr.divider {
-    border-top: 1px solid #878787;
+.divider {
+    display: block;
+    border-style: solid;
+    background-color: #eee;
+    color: #eee;
+    height: 1px;
+    border: none;
+    margin-bottom: 10px;
 }
 
 a {
@@ -14,7 +19,7 @@ a {
 
 .shopAfbeelding {
     border-radius: 10px;
-    max-width: 370px;
+    max-width: 100%;
 }
 
 .videoAfbeelding {
@@ -41,6 +46,7 @@ a {
 
 .videoTitel {
     font: inherit;
+    margin-bottom: 15px;
 }
 
 .videoPlay {
@@ -58,19 +64,26 @@ a {
     display: flex;
     align-items: center;
     color: #878787;
+    margin-left: 0px;
+        padding-left: 0px;
 }
 
 .titelArtikel {
     display: flex;
-    align-items: center;
-    text-align: left;
-    margin-left: 15px;
+        padding-left: 15px;
+            color: black;
+            margin-left: 0px;
 }
 
 .netBinnenWrapper {
     display: flex;
-    flex-direction: row;
-    margin-left: -40px;
+    flex-direction: column;
+        margin-bottom: 15px;
+        margin-left: 0px;
+    }
+    
+    .kopTitel {
+        margin-bottom: 10px;
 }
 
 /* Verwijdert de zijbalk bij schermen kleiner dan 800px breed */

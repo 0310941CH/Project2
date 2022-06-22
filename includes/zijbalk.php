@@ -1,28 +1,26 @@
 <head>
     <link rel="stylesheet" href="./style/zijBalk.css">
 </head>
-<h1>Net Binnen <img src="./images/netBinnenIcon.svg" alt="Net Binnen icon"></h1>
-<ul>
-    <?php
-    //Vooraf gedefinieerde variables
-    $limit = 4;
+<h1 class="kopTitel">Net Binnen <img src="./images/netBinnenIcon.svg" alt="Net Binnen icon"></h1>
+<?php
+$limit = 4; //Hieronder gebruikt variable om de limit aan te kunnen geven in select statement.
 
-    $artikel = $conn->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
-    $artikel->bindValue('limit', $limit, PDO::PARAM_INT);
-    $artikel->execute();
-    $data = $artikel->fetchAll();
-    foreach ($data as $artikel) {
-        $datumFormat = date("h:i", strtotime($artikel["datum_toegevoegd"]));
-        echo "<div class='netBinnenWrapper'>";
-        echo "<p class='datumArtikel'>" . $datumFormat . "</p> ";
-        echo "<a class='titelArtikel' href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $artikel["titel"] . "</a><br>";
-        echo "</div>";
-    }
-    ?>
-</ul>
+$artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit"); // Selecteer 4 berichten op uit de database, van hoog naar laag geselecteerd op berichtid.
+$artikel->bindValue('limit', $limit, PDO::PARAM_INT); // verbind prepared statement :limit aan de variable $limit.
+$artikel->execute();
+$data = $artikel->fetchAll(); // Haal de geselecteerde data op.
+foreach ($data as $artikel) { // Loop door de data en echo deze op de pagina.
+    $datumFormat = date("h:i", strtotime($artikel["datum_toegevoegd"]));
+    echo "<div class='netBinnenWrapper'>";
+    echo "<p class='datumArtikel'>" . $datumFormat;
+    echo "<a class='titelArtikel' href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $artikel["titel"] . "</a><br>";
+    echo "</p></div>";
+}
+?>
 <hr class="divider">
-
-<h1>Nieuwsvideo's</h1>
+<a href="https://www.nu.nl/videos/nieuwsvideos">
+    <h1 class="kopTitel">Nieuwsvideo's</h1>
+</a>
 <div class="videoContainer">
     <div class="videoLinks">
         <div class="videoWrapper">
@@ -56,6 +54,6 @@
 </div>
 
 <a href="https://shop.nu.nl/product/fletcher-hotels?&utm_source=nushop&utm_medium=cms_banner&utm_campaign=fletcherjuni">
-    <h1>NUshop</h1>
+    <h1 class="kopTitel">NUshop</h1>
     <img src="./images/extra/nuShop2.png" class="shopAfbeelding" alt="NU Shop Fletcher Hotels">
 </a>
