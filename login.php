@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("config/config.php");
+include_once("./config/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,27 +11,15 @@ include_once("config/config.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nu.NL Login</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/iFooter.css">
 </head>
 
 <body>
-    <?php include("header.php") ?>
-    <div class="column">
-        <img src="images/Nu.svg" alt="Nu" class="nuImage">
-        <h2>Inloggen op nu.nl</h2>
-        <span>Vul je wachtwoord in voor:</span>
-        <span><?php echo $_SESSION['email'] ?></span>
-        <a href="">Wijzig e-mailadres</a>
+    <?php include("./includes/header.php") ?>
 
-        <form action="" method="POST">
-            <input type="password" name="password"> <br>
-            <a href="">Wachtwoord vergeten</a><br>
-            <button type="submit" name="submitLogin">Log in</button>
-        </form>
-    </div>
-
+    <!-- PHP -->
     <?php
     // PHP Gedeelte
 
@@ -61,11 +49,31 @@ include_once("config/config.php");
                 header("Location: index.php");
                 exit();
             } else {
-                $output = "Wachtwoord is niet correct";
+                $error = "Wachtwoord is niet correct";
             }
+        } else {
+            $error = "Dit veld is verplicht";
         }
     }
     ?>
 
-<?php include("footer.php") ?>
+    <!-- HTML -->
+    <div class="column">
+        <img src="./images/Nu.svg" alt="Nu" class="nuImage">
+        <h2 class="titelTekst">Inloggen op nu.nl</h2>
+        <span>Vul je wachtwoord in voor:</span>
+        <span><?php echo $_SESSION['email'] ?></span>
+        <a class="tekst" href="identify.php">Wijzig e-mailadres</a>
+
+        <form action="" method="POST">
+            <input class="inputVeld" type="password" name="password" placeholder="Wachtwoord"> <br>
+            <?php if (isset($error)) {
+                echo '<p class="error" >' . $error . "</p>";
+            }
+            ?>
+            <a class="tekst" href="">Wachtwoord vergeten</a><br>
+            <button class="button" type="submit" name="submitLogin">Log in</button>
+        </form>
+    </div>
+    <?php include("./includes/iFooter.php") ?>
 </body>

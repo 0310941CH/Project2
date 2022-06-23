@@ -1,0 +1,94 @@
+.zijContainer {
+    width: 35%;
+}
+
+.divider {
+    display: block;
+    border-style: solid;
+    background-color: #eee;
+    color: #eee;
+    height: 1px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.shopAfbeelding {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.videoAfbeelding {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.videoRechts {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.videoLinks {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.videoTitel {
+    font: inherit;
+    margin-bottom: 15px;
+}
+
+.videoPlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.videoWrapper {
+    position: relative;
+    text-align: center;
+}
+
+.datumArtikel {
+    display: flex;
+    align-items: center;
+    color: #878787;
+    margin-left: 0px;
+        padding-left: 0px;
+}
+
+.titelArtikel {
+    display: flex;
+        padding-left: 15px;
+            color: black;
+            margin-left: 0px;
+}
+
+.netBinnenWrapper {
+    display: flex;
+    flex-direction: column;
+        margin-bottom: 15px;
+        margin-left: 0px;
+    }
+    
+    .kopTitel {
+        margin-bottom: 10px;
+}
+
+/* Verwijdert de zijbalk bij schermen kleiner dan 800px breed */
+@media only screen and (max-width: 800px) {
+    .zijContainer {
+        display: none;
+    }
+}

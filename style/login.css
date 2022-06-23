@@ -52,74 +52,62 @@
 
     --pswmeter: #EEE;
 }
-
+body {
+    overflow: hidden;
+}
 .nuImage {
     width: 48px;
     height: 48px;
-    margin-top: 20px;
 }
 .column {
-    font-family: Montserrat; 
+    font-family: Sharp Sans Display, Arial, sans-serif;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.pijltje {
-   transform: rotate(270deg);
-   width: 20px;
-   height: 10px;
-   display: flex;
-    margin: 16px auto 24px auto;
-    column-gap: 20px;
+.tekst {
+    margin-bottom: 15px;
+    color: inherit;
 }
 
-.column > h1 {
-    font-family: Sharp Sans Display, Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 32px auto 16px;
-    text-align: center;
+.inputVeld {
+    width: 340px;
+    height: 50px;
+    margin-top: 12px;
+    border-radius: 3px;
+    border: solid 1px var(--dpg-medium-grey);
+        padding-left: 10px;
 }
+
+.inputVeld:focus {
+    outline: 1px solid var(--dpg-yellow);
+}
+    
+.button:hover {
+    background-color: var(--dpg-yellow-darker);
+    cursor: pointer;
+}
+    
 .button {
-    font-family: Montserrat, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 900;
     background-color: var(--dpg-yellow);
     border: none;
     width: 340px;
-    height: 60px;
+    height: 54px;
 }
-.emailInput {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+    
+.button h3 {
+    color: var(--darker-gray);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
 }
-.email {
-    width: 330px;
-    height: 45px;
-    margin-bottom: -10px;
-    border-radius: 3px;
-    border-color: var(--semi-trans-white);
+
+.titelTekst {
+    margin: 15px;
 }
-.email:focus {
-    outline: 1px solid var(--dpg-yellow);
-}
-button:hover {
-    background-color: var(--dpg-yellow-darker);
-}
-.dpgmedia {
-    display: flex;
-    margin: 16px auto 24px auto;
-    column-gap: 20px;
-    text-align: center;
-    width: 100%;
-    font-size: 14px;
-    text-decoration: underline;
-}
-.summary {
-    display: flex;
-    flex-direction: row;
+.error {
+    color: var(--dpg-red);
 }

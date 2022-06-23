@@ -53,16 +53,17 @@
     --pswmeter: #EEE;
 }
 
+* {
+    margin: 0;
+}
+
 .footer-styling {
     font-size: 14px;
     display: flex;
-    position: absolute;
     padding: 12px;
     align-content: center;
     flex-direction: row;
     justify-content: space-around;
-    bottom: 0;
-    left: 0;
     width: 98%;
 }
 
