@@ -1,3 +1,4 @@
+<?php require '../config/config.php'; ?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -5,46 +6,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel overzicht</title>
+    <link rel="stylesheet" href="../style/artikelOverzicht.css">
+    <title>Admin - Artikel overzicht</title>
 </head>
 
 <body>
-    <table>
+    <table class="tabelOverzicht">
         <tr>
             <th>ID</th>
             <th>Titel</th>
-            <th>Country</th>
+            <th>Auteur</th>
+            <th>Inzien</th>
+            <th>Edit</th>
+            <th>Verwijder</th>
         </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
-        <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td>Austria</td>
-        </tr>
-        <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td>UK</td>
-        </tr>
-        <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td>Canada</td>
-        </tr>
-        <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
-        </tr>
+        <?php
+
+        $berichten = $pdo->query("SELECT * FROM berichten")->fetchAll();
+        foreach ($berichten as $berichtInfo) {
+            echo '<tr>';
+            echo '<td> ' . $berichtInfo['berichtId'] . '</td>';
+            echo '<td> ' . $berichtInfo['titel'] . '</td>';
+            echo '<td> ' . $berichtInfo['auteur'] . '</td>';
+            echo "<td><a href='../artikel.php?id=" . $berichtInfo['berichtId'] . "'>Bekijk</a></td>";
+            echo "<td><a href='WIJZIGPAGINA.php?id=" . $berichtInfo['berichtId'] . "'>Wijzig</a></td>";
+            echo '<td class="tabelOverzichtCenter"><a href="../includes/verwijderArtikel.php?id=' . $berichtInfo['berichtId'] . '"><img class="verwijder" src="../images/delete.png" alt="Verwijder knop"></a></td>';
+            echo '</tr>';
+        }
+        ?>
     </table>
 
 
