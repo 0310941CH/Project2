@@ -276,6 +276,10 @@ body {
     background-color: white;
 }
 
+#tech {
+    width: 14vh;
+}
+
 .dropdown-info {
     display: none;
     align-self: flex-end;

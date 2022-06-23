@@ -62,7 +62,7 @@
             </ul>
             </ul>
             <!--Mediaencultuur-->
-            <ul class="blokken">
+            <ul class="blokken" id="media">
                 <li class="footer_header"><a href="" style="color: #ed893c;">Media en Cultuur</a>
                 <li class="footer_subitem"><a href="https://nu.nl/Film">Films en series</a></li>
                 <li class="footer_subitem"><a href="https://nu.nl/Muziek">Muziek</a></li>
@@ -88,7 +88,7 @@
                 </li>
             </ul>
             <!--Regio-->
-            <ul class="blokken">
+            <ul class="blokken" id="regio">
                 <li class="footer_header"><a href="" style="color: #1f2544;">Regio</a>
                 <li class="footer_subitem"><a href="https://nu.nl/alphen-aan-den-rijn">Alphen a/d Rijn</a></li>
                 <li class="footer_subitem"><a href="https://nu.nl/Amersfoort">Amersfoort</a></li>

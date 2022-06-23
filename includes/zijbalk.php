@@ -3,13 +3,14 @@
 </head>
 <h1 class="kopTitel">Net Binnen <img src="./images/netBinnenIcon.svg" alt="Net Binnen icon"></h1>
 <?php
-$limit = 4; //Hieronder gebruikt variable om de limit aan te kunnen geven in select statement.
+//Vooraf gedefinieerde variables
+$limit = 4;
 
-$artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit"); // Selecteer 4 berichten op uit de database, van hoog naar laag geselecteerd op berichtid.
-$artikel->bindValue('limit', $limit, PDO::PARAM_INT); // verbind prepared statement :limit aan de variable $limit.
+$artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
+$artikel->bindValue('limit', $limit, PDO::PARAM_INT);
 $artikel->execute();
-$data = $artikel->fetchAll(); // Haal de geselecteerde data op.
-foreach ($data as $artikel) { // Loop door de data en echo deze op de pagina.
+$data = $artikel->fetchAll();
+foreach ($data as $artikel) {
     $datumFormat = date("h:i", strtotime($artikel["datum_toegevoegd"]));
     echo "<div class='netBinnenWrapper'>";
     echo "<p class='datumArtikel'>" . $datumFormat;
@@ -52,6 +53,12 @@ foreach ($data as $artikel) { // Loop door de data en echo deze op de pagina.
         </a>
     </div>
 </div>
+
+<a href="https://shop.nu.nl/product/rookmelder-2-pack?&utm_source=nushop&utm_medium=cms_banner&utm_campaign=rookmeldersjuni&_ga=2.223785947.1750777941.1655711292-1958498059.1654586375">
+    <h1 class="kopTitel">NUshop</h1>
+    <img src="https://media.nu.nl/m/fj0xeq3aqw28_wd1280.jpg" class="shopAfbeelding" alt="NU Shop brandmelder">
+</a>
+
 
 <a href="https://shop.nu.nl/product/fletcher-hotels?&utm_source=nushop&utm_medium=cms_banner&utm_campaign=fletcherjuni">
     <h1 class="kopTitel">NUshop</h1>

@@ -152,7 +152,7 @@
             </ul>
             </li>
             <!--Tech-->
-            <ul class="blokken-dropdown">
+            <ul class="blokken-dropdown" id="tech">
                 <li class="nav_header"><a href="" style="color: #5100AF">Tech</a>
                 <li class="nav_subitem"><a href="">Games</a></li>
                 <li class="nav_subitem"><a href="">Reviews</a></li>
