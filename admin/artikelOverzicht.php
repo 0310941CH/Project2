@@ -24,7 +24,7 @@ require '../config/config.php'; ?>
         </tr>
         <?php
         // Controleer of gebruiker juiste permissie's heeft, anders terug sturen naar index.php
-        if ($_SESSION['redacteur'] == 1 || $_SESSION['administrator'] == 2) {
+        if ($_SESSION['admin'] == 1) {
 
             $berichten = $pdo->query("SELECT * FROM berichten")->fetchAll(); //Selecteer alle gegevens uit tabel berichten.
             foreach ($berichten as $berichtInfo) { // Loopt door alle gegevens heen en echo'd deze op de pagina.

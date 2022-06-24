@@ -3,7 +3,7 @@ session_start();
 include_once("../config/config.php");
 
 // Checking if admin is logged in otherwise sending it back to adminlogin.php
-if ($_SESSION['redacteur'] == 1 || $_SESSION['administrator'] == 2) {
+if ($_SESSION['admin'] == 1) {
     if (isset($_POST['submitCreate'])) {
         // The Image paths and setup for the specific image uploading
         

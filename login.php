@@ -39,9 +39,9 @@ include_once("./config/config.php");
             $user = $prepare->fetch(PDO::FETCH_ASSOC);
 
             if (isset($user["rank"]) && $user["rank"] == 2) {
-                $_SESSION['administrator'] = 2;
-            } elseif (isset($user["rank"]) && $user["rank"] == 1) {
-                $_SESSION['redacteur'] = 1;
+                $_SESSION['admin'] == 1;
+            } else if (isset($user["rank"]) && $user["rank"] == 1) {
+                $_SESSION['admin'] == 1;
             }
             $wachtwoordCheck = password_verify($_POST["password"], $user["passwords"]);
 

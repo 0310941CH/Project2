@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['redacteur'] == 1 || $_SESSION['administrator'] == 2) {
+if ($_SESSION['admin'] == 1) {
     require '../config/config.php';
 
     $id = $_GET["id"]; // Geeft de waarde van get "id" aan het variable id
