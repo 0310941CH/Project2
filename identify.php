@@ -24,7 +24,7 @@ include_once("config/config.php");
     //PHP Gedeelte
     if (isset($_POST['submitEmail'])) {
         if ($_POST['email'] != "") {
-            $emailAdress = $_POST['email'];
+            $emailAdress = htmlspecialchars($_POST['email']); // Zet het meegegeven email adres om naar html characters.
 
             $execute = $pdo->prepare('SELECT * FROM users WHERE email=:email');
 

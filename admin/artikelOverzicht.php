@@ -22,17 +22,23 @@
             <th>Verwijder</th>
         </tr>
         <?php
+        // Controleer of gebruiker juiste permissie's heeft, anders terug sturen naar index.php
+        if ($_SESSION['redacteur'] == 1 || $_SESSION['administrator'] == 2) {
 
-        $berichten = $pdo->query("SELECT * FROM berichten")->fetchAll();
-        foreach ($berichten as $berichtInfo) {
-            echo '<tr>';
-            echo '<td> ' . $berichtInfo['berichtId'] . '</td>';
-            echo '<td> ' . $berichtInfo['titel'] . '</td>';
-            echo '<td> ' . $berichtInfo['auteur'] . '</td>';
-            echo "<td><a href='../artikel.php?id=" . $berichtInfo['berichtId'] . "'>Bekijk</a></td>";
-            echo "<td><a href='WIJZIGPAGINA.php?id=" . $berichtInfo['berichtId'] . "'>Wijzig</a></td>";
-            echo '<td class="tabelOverzichtCenter"><a href="../includes/verwijderArtikel.php?id=' . $berichtInfo['berichtId'] . '"><img class="verwijder" src="../images/delete.png" alt="Verwijder knop"></a></td>';
-            echo '</tr>';
+            $berichten = $pdo->query("SELECT * FROM berichten")->fetchAll(); //Selecteer alle gegevens uit tabel berichten.
+            foreach ($berichten as $berichtInfo) { // Loopt door alle gegevens heen en echo'd deze op de pagina.
+                echo '<tr>';
+                echo '<td> ' . $berichtInfo['berichtId'] . '</td>';
+                echo '<td> ' . $berichtInfo['titel'] . '</td>';
+                echo '<td> ' . $berichtInfo['auteur'] . '</td>';
+                echo "<td><a href='../artikel.php?id=" . $berichtInfo['berichtId'] . "'>Bekijk</a></td>"; // stuurt je door naar het artikel
+                echo "<td><a href='WIJZIGPAGINA.php?id=" . $berichtInfo['berichtId'] . "'>Wijzig</a></td>"; // stuurt je door naar een pagina waar je het artikel kan wijzigen
+                echo '<td class="tabelOverzichtCenter"><a href="../includes/verwijderArtikel.php?id=' . $berichtInfo['berichtId'] . '"><img class="verwijder" src="../images/delete.png" alt="Verwijder knop"></a></td>'; // Knop voor het verwijderen van het artikel.
+                echo '</tr>';
+            }
+        } else {
+            header("Location: ../index.php");
+            exit();
         }
         ?>
     </table>

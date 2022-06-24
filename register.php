@@ -31,10 +31,10 @@ include_once("config/config.php");
             $nummer    = preg_match('@[0-9]@', $_POST['password']);
             $specialChars = preg_match('@[^\w]@', $_POST['password']);
             if ($hoofdletter && $kleineletter && $nummer && $specialChars && strlen($_POST['password']) >= 10) {
-                $email = $_SESSION['email'];
-                $wachtwoord = $_POST['password'];
-                $voornaam = $_POST['voornaam'];
-                $achternaam = $_POST['achternaam'];
+                $email = htmlspecialchars($_SESSION['email']); // Zet de meegegeven email om naar html characters.
+                $wachtwoord = htmlspecialchars($_POST['password']); // Zet het meegegeven wachtwoord om naar html characters.
+                $voornaam = htmlspecialchars($_POST['voornaam']); // Zet de meegegeven voornaam om naar html characters.
+                $achternaam = htmlspecialchars($_POST['achternaam']); // Zet de meegegeven achternaam om naar html characters.
                 $hash = password_hash($wachtwoord, PASSWORD_DEFAULT);
                 // Standaard rank geven || Rank 0 is voor gebruikers
                 $rank = 0;

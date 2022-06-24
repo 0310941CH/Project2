@@ -25,8 +25,8 @@ include_once("./config/config.php");
 
     if (isset($_POST['submitLogin'])) {
         if ($_POST['password'] != "") {
-            $email = $_SESSION['email'];
-            $wachtwoord = $_POST['password'];
+            $email = htmlspecialchars($_SESSION['email']); // Zet het meegegeven email adres om naar html characters.
+            $wachtwoord = htmlspecialchars($_POST['password']); // Zet het meegegeven wachtwoord om naar html characters.
             //PDO
             $login = "SELECT * FROM users WHERE email=:email";
             $prepare = $pdo->prepare($login);
