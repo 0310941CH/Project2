@@ -1,4 +1,6 @@
-<?php require '../config/config.php'; ?>
+<?php
+session_start();
+require '../config/config.php'; ?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -7,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/artikelOverzicht.css">
-    <script src="./js/delete.js"></script>
     <title>Admin - Artikel overzicht</title>
 </head>
 
@@ -32,7 +33,7 @@
                 echo '<td> ' . $berichtInfo['titel'] . '</td>';
                 echo '<td> ' . $berichtInfo['auteur'] . '</td>';
                 echo "<td><a href='../artikel.php?id=" . $berichtInfo['berichtId'] . "'>Bekijk</a></td>"; // stuurt je door naar het artikel
-                echo "<td><a href='WIJZIGPAGINA.php?id=" . $berichtInfo['berichtId'] . "'>Wijzig</a></td>"; // stuurt je door naar een pagina waar je het artikel kan wijzigen
+                echo "<td><a href='/artikelToevoegen.php?id=" . $berichtInfo['berichtId'] . "'>Wijzig</a></td>"; // stuurt je door naar een pagina waar je het artikel kan wijzigen
                 echo '<td class="tabelOverzichtCenter"><a href="../includes/verwijderArtikel.php?id=' . $berichtInfo['berichtId'] . '"><img class="verwijder" src="../images/delete.png" alt="Verwijder knop"></a></td>'; // Knop voor het verwijderen van het artikel.
                 echo '</tr>';
             }
