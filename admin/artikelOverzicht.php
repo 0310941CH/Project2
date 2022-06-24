@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/artikelOverzicht.css">
+    <script src="./js/delete.js"></script>
     <title>Admin - Artikel overzicht</title>
 </head>
 
@@ -17,7 +18,7 @@
             <th>Titel</th>
             <th>Auteur</th>
             <th>Inzien</th>
-            <th>Edit</th>
+            <th>Wijzig</th>
             <th>Verwijder</th>
         </tr>
         <?php
@@ -35,7 +36,6 @@
         }
         ?>
     </table>
-
 
 </body>
 
