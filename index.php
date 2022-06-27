@@ -36,7 +36,6 @@
                         </svg>
                     </div>
                 </div>
-                <!--! Hier beginnen de artikelen -->
                 <?php
                 //Artikel ID uit de get halen.
                 $limits = 1;
@@ -72,7 +71,6 @@
                     echo "</li></div>";
                 }
                 ?>
-                <!--! Hier eindigen de artikelen -->
             </div> <!-- einde left_div -->
             <div class="right_div">
                 <div class="icons">
