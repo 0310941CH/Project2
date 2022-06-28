@@ -13,6 +13,7 @@ require '../config/config.php'; ?>
 </head>
 
 <body>
+    <?php require '../config/config.php'; ?>
     <div class="containerWijziging">
         <h1 class="titelCenter">Artikel wijzigen</h1>
         <div class="contentArtikel">

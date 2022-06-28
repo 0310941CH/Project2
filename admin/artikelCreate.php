@@ -6,7 +6,7 @@ include_once("../config/config.php");
 if ($_SESSION['admin'] == 1) {
     if (isset($_POST['submitCreate'])) {
         // The Image paths and setup for the specific image uploading
-        
+
         $pathDirectory = "../images/artikelAfbeelding/";
         $fullpath = $pathDirectory . basename($_FILES["image"]["name"]);
         $uploadValidation = 1; // This is for if the image is valid for moving => 0 is not valid || 1 is valid for moving
@@ -70,7 +70,7 @@ if ($_SESSION['admin'] == 1) {
 } else {
     header("Location: ../index.php");
     exit();
-} 
+}
 ?>
 
 <!DOCTYPE html>
@@ -85,47 +85,48 @@ if ($_SESSION['admin'] == 1) {
 </head>
 
 <body>
+    <?php require '../config/config.php'; ?>
     <h1>Artikel aanmaken</h1>
-<form action="" method="POST" enctype="multipart/form-data">
-    <table>
-        <tr>
-            <th>Test</th>
-            <th>Input</th>
-        </tr>
-        <tr>
-            <td>Titel</td>
-            <td><input type="text" name="titel" required></td>
-        </tr>
-        <tr>
-            <td>Samenvatting</td>
-            <td><input type="text" name="samenvatting" required></td>
-        </tr>
-        <tr>
-            <td>Omschrijving</td>
-            <td><input type="text" name="omschrijving" required></td>
-        </tr>
-        <tr>
-            <td>Auteur</td>
-            <td><input type="text" name="auteur" required></td>
-        </tr>
-        <tr>
-            <td>Foto</td>
-            <td><input  type="file" name="image" accept=".png" required></td>
-        </tr>
-        <tr>
-            <td>Auteur Foto</td>
-            <td><input type="text" name="fotoauteur" required></td>
-        </tr>
-        <tr>
-            <td>Categorie</td>
-            <td><select name="categorie">
-                <option value="Binnenland">Binnenland</option>
-                <option value="Buitenland">Buitenland</option>
-                <option value="Politiek">Politiek</option>
-                <option value="Klimaat">Klimaat</option>
-            </select></td>
-        </tr>
-    </table>
-    <button type="submit" name="submitCreate">Maak het artikel aan!</button>
-</form>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th>Test</th>
+                <th>Input</th>
+            </tr>
+            <tr>
+                <td>Titel</td>
+                <td><input type="text" name="titel" required></td>
+            </tr>
+            <tr>
+                <td>Samenvatting</td>
+                <td><input type="text" name="samenvatting" required></td>
+            </tr>
+            <tr>
+                <td>Omschrijving</td>
+                <td><input type="text" name="omschrijving" required></td>
+            </tr>
+            <tr>
+                <td>Auteur</td>
+                <td><input type="text" name="auteur" required></td>
+            </tr>
+            <tr>
+                <td>Foto</td>
+                <td><input type="file" name="image" accept=".png" required></td>
+            </tr>
+            <tr>
+                <td>Auteur Foto</td>
+                <td><input type="text" name="fotoauteur" required></td>
+            </tr>
+            <tr>
+                <td>Categorie</td>
+                <td><select name="categorie">
+                        <option value="Binnenland">Binnenland</option>
+                        <option value="Buitenland">Buitenland</option>
+                        <option value="Politiek">Politiek</option>
+                        <option value="Klimaat">Klimaat</option>
+                    </select></td>
+            </tr>
+        </table>
+        <button type="submit" name="submitCreate">Maak het artikel aan!</button>
+    </form>
 </body>

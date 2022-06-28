@@ -13,6 +13,7 @@ require '../config/config.php'; ?>
 </head>
 
 <body>
+    <?php require '../config/config.php'; ?>
     <table class="tabelOverzicht">
         <tr>
             <th>ID</th>
