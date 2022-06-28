@@ -56,7 +56,7 @@ if ($_SESSION['admin'] == 1) {
                     } catch (PDOException $e) {
                         echo "There was a error";
                     }
-                    header("Location: /admin/artikelOverzicht.php");
+                    header("Location: ../admin/artikelOverzicht.php");
                     exit();
                 } else {
                     echo "You need to input all fields";

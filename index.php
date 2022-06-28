@@ -51,8 +51,8 @@
                         $str = explode("\n", wordwrap($artikel['titel'], 70)); // haalt alles weg na 70 characters
                         $str = $str[0] . '...'; // zet "..." neer achter de string
                     }
-                    echo "<div class='titelBox'><img class='imageSize' src='./images/artikelAfbeelding/" . $artikel['images'] . "' alt='Artikel afbeelding'>";
-                    echo "<div class='titelaArtikel'><h1 href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $str . "</h1></div></div>";
+                    echo "<a href='artikel.php?id=" . $artikel["berichtId"] . "'><div class='titelBox'><img class='imageSize' src='./images/artikelAfbeelding/" . $artikel['images'] . "' alt='Artikel afbeelding'>";
+                    echo "<div class='titelaArtikel'><h1 href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $str . "</h1></a></div></div>";
                     
                 }
                 $limit = 9;
