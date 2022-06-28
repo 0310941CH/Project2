@@ -13,7 +13,7 @@ require '../config/config.php'; ?>
 </head>
 
 <body>
-    <?php require '../config/config.php'; ?>
+    <?php include '../admin/adminMenu.php'; ?>
     <table class="tabelOverzicht">
         <tr>
             <th>ID</th>

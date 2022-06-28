@@ -85,7 +85,7 @@ if ($_SESSION['admin'] == 1) {
 </head>
 
 <body>
-    <?php require '../config/config.php'; ?>
+    <?php include '../admin/adminMenu.php'; ?>
     <h1>Artikel aanmaken</h1>
     <form action="" method="POST" enctype="multipart/form-data">
         <table>
