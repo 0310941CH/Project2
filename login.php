@@ -37,8 +37,8 @@ include_once("config/config.php");
 
     if (isset($_POST['submitLogin'])) {
         if ($_POST['password'] != "") {
-            $email = $_SESSION['email'];
-            $wachtwoord = $_POST['password'];
+            $email = htmlspecialchars($_SESSION['email']); // Zet het meegegeven email adres om naar html characters.
+            $wachtwoord = htmlspecialchars($_POST['password']); // Zet het meegegeven wachtwoord om naar html characters.
             //PDO
             $login = "SELECT * FROM users WHERE email=:email";
             $prepare = $pdo->prepare($login);
@@ -50,11 +50,14 @@ include_once("config/config.php");
             $prepare->execute($data);
             $user = $prepare->fetch(PDO::FETCH_ASSOC);
 
-            if (isset($user["rank"]) && $user["rank"] == 2) {
-                $_SESSION['administrator'] = 2;
-            } elseif (isset($user["rank"]) && $user["rank"] == 1) {
-                $_SESSION['redacteur'] = 1;
+            if (isset($user["rank"]) && $user["rank"] == 1) {
+                $_SESSION['admin'] = 1;
             }
+
+            if (isset($user["rank"])) {
+                $_SESSION['user'] = 1;
+            }
+
             $wachtwoordCheck = password_verify($_POST["password"], $user["passwords"]);
 
             if ($wachtwoordCheck == true) {

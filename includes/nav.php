@@ -1,4 +1,6 @@
-<?php require 'config/config.php'; ?>
+<?php
+session_start();
+require 'config/config.php'; ?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -60,7 +62,17 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.646 20.646a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0Z" fill="#fff"></path>
                     </g>
                 </svg>
-                <a href="identify.php">Inloggen</a>
+                <?php
+                if (isset($_SESSION["user"])) {
+                    echo "<a href='./includes/logout.php'>Loguit</a>";
+                } else {
+                    echo "<a href='identify.php'>Login</a>";
+                }
+
+                if (isset($_SESSION["admin"])) {
+                    echo "<a href='./admin/artikelOverzicht.php'>Admin</a>";
+                }
+                ?>
             </div>
         </div>
     </nav>
@@ -97,7 +109,17 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.646 20.646a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0Z" fill="#fff"></path>
                     </g>
                 </svg>
-                <a href="">Inloggen</a>
+                <?php
+                if (isset($_SESSION["user"])) {
+                    echo "<a href='./includes/logout.php'>Loguit</a>";
+                } else {
+                    echo "<a href='identify.php'>Login</a>";
+                }
+
+                if (isset($_SESSION["admin"])) {
+                    echo "<a href='./admin/artikelOverzicht.php'>Admin</a>";
+                }
+                ?>
             </div>
         </div>
         <div class="onder">

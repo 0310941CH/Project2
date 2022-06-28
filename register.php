@@ -20,6 +20,45 @@ include_once("config/config.php");
 
 <body>
     <?php include("includes/header.php") ?>
+
+    <?php
+    //PHP Gedeelte voor inserten etc
+
+    if (isset($_POST['submitInputs'])) {
+        if ($_POST['password'] != "" && $_POST['voornaam'] != "" && $_POST['achternaam'] != "") {
+            $hoofdletter = preg_match('@[A-Z]@', $_POST['password']);
+            $kleineletter = preg_match('@[a-z]@', $_POST['password']);
+            $nummer    = preg_match('@[0-9]@', $_POST['password']);
+            $specialChars = preg_match('@[^\w]@', $_POST['password']);
+            if ($hoofdletter && $kleineletter && $nummer && $specialChars && strlen($_POST['password']) >= 10) {
+                $email = htmlspecialchars($_SESSION['email']); // Zet de meegegeven email om naar html characters.
+                $wachtwoord = htmlspecialchars($_POST['password']); // Zet het meegegeven wachtwoord om naar html characters.
+                $voornaam = htmlspecialchars($_POST['voornaam']); // Zet de meegegeven voornaam om naar html characters.
+                $achternaam = htmlspecialchars($_POST['achternaam']); // Zet de meegegeven achternaam om naar html characters.
+                $hash = password_hash($wachtwoord, PASSWORD_DEFAULT);
+                // Standaard rank geven || Rank 0 is voor gebruikers
+                $rank = 0;
+                //PDO Start
+
+                try {
+                    $query = 'INSERT INTO users (voornaam, achternaam, email, passwords, rank) VALUES (:vname, :aname, :email, :pswrd, :rank)';
+                    $values = [':vname' => $voornaam, ':aname' => $achternaam, ':email' => $email, ':pswrd' => $hash, ':rank' => $rank];
+                    $execute = $pdo->prepare($query);
+                    $execute->execute($values);
+                } catch (PDOException $e) {
+                    $output = "Er is een fout opgedoken probeer het later opnieuw";
+                }
+                $_SESSION['email'] = $email;
+                header("Location: login.php");
+                exit();
+            } else {
+                $errorWachtwoord = "Ongeldig wachtwoord. Kijk goed naar de vereisten!";
+            }
+        } else {
+            $error = "Je moet alle velden invullen!";
+        }
+    }
+    ?>
     <div class="width">
         <div class="column">
             <form action="" method="POST" class="column">
@@ -27,7 +66,7 @@ include_once("config/config.php");
                 <h2>Maak je account aan</h2>
                 <div id="cube">
                     <div>
-                        <span id="thin">Je maakt een DVG account aan met:</span>
+                        <span id="thin">Je maakt een DPG Media account aan met:</span>
                     </div>
                     <div id="spacing">
                         <strong id="mail"><?php echo $_SESSION['email'] ?></strong>
@@ -38,13 +77,21 @@ include_once("config/config.php");
                 </div>
                 <div class="width">
                     <h3 class="size">Stel je wachtwoord in</h3>
-                    <input type="password" name="password" placeholder="wachtwoord"> <br>
+                    <input type="password" name="password" placeholder="wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w]).{10,}" title="Minimaal 10 tekens in totaal, teminste 1 kleine letter, 1 cijfer, 1 hoofdletter en 1 speciaal teken" required> <br>
                     <i class="ten">Gebruik minimaal 10 karakters</i>
+                    <?php if (isset($errorWachtwoord)) {
+                        echo '<p class="error" >' . $errorWachtwoord . "</p>";
+                    }
+                    ?>
                 </div>
                 <div class="width">
                     <h3 class="size">Persoonlijke gegevens</h3>
                     <input type="text" name="voornaam" placeholder="Voornaam"> <br><br>
                     <input type="text" name="achternaam" placeholder="Achternaam">
+                    <?php if (isset($error)) {
+                        echo '<p class="error" >' . $error . "</p>";
+                    }
+                    ?>
                 </div>
                 <div class="width">
                     <label class="checkboxProduct">
@@ -84,40 +131,5 @@ include_once("config/config.php");
         </div>
     </div>
     <?php include("includes/iFooter.php") ?>
-
-    <?php
-    //PHP Gedeelte voor inserten etc
-    if (isset($_POST['submitInputs'])) {
-        if ($_POST['password'] != "" && $_POST['voornaam'] != "" && $_POST['achternaam'] != "") {
-            $hoofdletter = preg_match('@[A-Z]@', $_POST['password']);
-            $kleineletter = preg_match('@[a-z]@', $_POST['password']);
-            $nummer    = preg_match('@[0-9]@', $_POST['password']);
-            $specialChars = preg_match('@[^\w]@', $_POST['password']);
-            if ($hoofdletter && $kleineletter && $nummer && $specialChars && strlen($_POST['password']) >= 10) {
-                $email = $_SESSION['email'];
-                $wachtwoord = $_POST['password'];
-                $voornaam = $_POST['voornaam'];
-                $achternaam = $_POST['achternaam'];
-                $hash = password_hash($wachtwoord, PASSWORD_DEFAULT);
-                // Standaard rank geven || Rank 0 is voor gebruikers
-                $rank = 0;
-                //PDO Start
-
-                try {
-                    $query = 'INSERT INTO users (voornaam, achternaam, email, passwords, rank) VALUES (:vname, :aname, :email, :pswrd, :rank)';
-                    $values = [':vname' => $voornaam, ':aname' => $achternaam, ':email' => $email, ':pswrd' => $hash, ':rank' => $rank];
-                    $execute = $pdo->prepare($query);
-                    $execute->execute($values);
-                } catch (PDOException $e) {
-                    $output = "Er is een fout opgedoken probeer het later opnieuw";
-                }
-                /* $_SESSION['email'] = $email; */
-                $_SESSION['email'] = 'fernandokook1023@gmail.com';
-                header("Location: login.php");
-                exit();
-            }
-        }
-    }
-    ?>
 
 </body>

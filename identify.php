@@ -19,17 +19,45 @@ include_once("config/config.php");
 </head>
 
 <body>
-<?php include("includes/header.php") ?>
+    <?php include("includes/header.php") ?>
+    <?php
+    //PHP Gedeelte
+    if (isset($_POST['submitEmail'])) {
+        if ($_POST['email'] != "") {
+            $emailAdress = htmlspecialchars($_POST['email']); // Zet het meegegeven email adres om naar html characters.
+
+            $execute = $pdo->prepare('SELECT * FROM users WHERE email=:email');
+
+            $data = [
+                ":email" => $emailAdress,
+            ];
+            $execute->execute($data);
+            $email = $execute->fetch(PDO::FETCH_ASSOC);
+
+            if ($email === false) {
+                $_SESSION['email'] = $emailAdress;
+                header("Location: register.php");
+            } elseif ($email == true) {
+                $_SESSION['email'] = $emailAdress;
+                header("Location: login.php");
+            }
+        } else {
+            $error = "Dit veld is verplicht";
+        }
+    }
+    ?>
     <div class="column">
         <img src="images/Nu.svg" alt="Nu" class="nuImage">
         <h1>Log in of maak je account aan</h1>
         <span>Vul je e-mailadres in</span>
         <form class="emailInput" action="" method="POST">
             <input type="text" id="email" class="email" name="email" placeholder="E-mailadress"> <br>
-            <button type="submit" class="button" name="submitEmail"><h3>Ga Verder</h3></button>
+            <button type="submit" class="button" name="submitEmail">
+                <h3>Ga Verder</h3>
+            </button>
         </form>
         <summary class="summary">
-        <button onclick="dropdownDPG()" class="dropdown_button"><span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" id="pijltje"></button>
+            <button onclick="dropdownDPG()" class="dropdown_button"><span class="dpgmedia">Over DPG Media account</span> <img src="images/arrow-left.svg" alt="pijltje" id="pijltje"></button>
         </summary>
 
         <div id="dropdown_DPG">
@@ -46,7 +74,7 @@ include_once("config/config.php");
                 <p>Heb je een abonnement op een van de nieuwsmerken? Dan krijg je onbeperkt toegang tot alle artikelen en video's van dat nieuwsmerk.</p>
             </div>
         </div>
-        
+
         <div class="help_login">
             <h2>Hulp bij inloggen</h2>
             <a href="https://login.dpgmedia.nl/password/reset?client_id=nu-site-web">Ik ben mijn wachtwoord vergeten</a> <br>
