@@ -242,11 +242,10 @@ body {
     margin: 0px auto 0;
     display: flex;
     width: 100%;
-    max-width: 1020px;
+    max-width: 990px;
     min-width: 280px;
     height: 96%;
     padding: 10px;
-    justify-content: space-between;
 }
 
 #dropdown {
@@ -446,14 +445,17 @@ body {
 
 /*container*/
 .left_div {
-    width: 50%;
+    width: 65%;
     height: 90vh;
     margin-left: 10px;
+    float: left;
 }
 
 .right_div {
-    width: 40%;
+    width: 35%;
     height: auto;
+    float: right;
+   
 }
 
 .content_datum {

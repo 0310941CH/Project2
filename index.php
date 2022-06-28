@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
     <title>NU - Het laatste nieuws het eerst op NU.nl</title>
     <link rel="icon" href="images/Nu-nl-logo.png">
 </head>
@@ -29,9 +30,6 @@
                         </div>
                         <p>Het laatste nieuws het eerst op NU.nl</p>
                     </div>
-                    <!--! Hier beginnen de artikelen -->
-
-                    <!--! Hier eindigen de artikelen -->
                     <div class="content_datum_svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -39,7 +37,42 @@
                         </svg>
                     </div>
                 </div>
-            </div>
+                <?php
+                //Artikel ID uit de get halen.
+                $limits = 1;
+                
+                $artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
+                $artikel->bindValue('limit', $limits, PDO::PARAM_INT);
+                $artikel->execute();
+                $data = $artikel->fetchAll();
+                foreach ($data as $artikel) {
+                    $str = $artikel['titel'];
+                    if(strlen($artikel['titel']) > 70) { // checked of string lengte langer is dan 70
+                        $str = explode("\n", wordwrap($artikel['titel'], 70)); // haalt alles weg na 70 characters
+                        $str = $str[0] . '...'; // zet "..." neer achter de string
+                    }
+                    echo "<div class='titelBox'><img class='imageSize' src='./images/artikelAfbeelding/" . $artikel['images'] . "' alt='Artikel afbeelding'>";
+                    echo "<div class='titelaArtikel'><h1 href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $str . "</h1></div></div>";
+                    
+                }
+                $limit = 9;
+
+                $artikel = $pdo->prepare("SELECT * FROM berichten ORDER BY berichtId DESC LIMIT :limit");
+                $artikel->bindValue('limit', $limit, PDO::PARAM_INT);
+                $artikel->execute();
+                $data = $artikel->fetchAll();
+                foreach ($data as $artikel) {
+                    $str = $artikel['titel'];
+                    if(strlen($artikel['titel']) > 70) { // checked of string lengte langer is dan 70
+                        $str = explode("\n", wordwrap($artikel['titel'], 50)); // haalt alles weg na 70 characters
+                        $str = $str[0] . '...'; // zet "..." neer achter de string
+                    }
+                    echo "<div class=''><li>";
+                    echo "<a class='titel' href='artikel.php?id=" . $artikel["berichtId"] . "'>" . $str . "</a>";
+                    echo "</li></div>";
+                }
+                ?>
+            </div> <!-- einde left_div -->
             <div class="right_div">
                 <div class="icons">
                     <div class="icon1">
@@ -157,7 +190,7 @@
                     </div>
                 </div>
                 <?php include 'includes/zijbalk.php'; ?>
-            </div>
+            </div> <!-- einde right_div -->
         </div>
     </div>
     <?php require './includes/footer.php' ?>
