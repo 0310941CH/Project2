@@ -100,11 +100,11 @@ if ($_SESSION['admin'] == 1) {
             </tr>
             <tr>
                 <td>Samenvatting</td>
-                <td><input type="text" name="samenvatting" required></td>
+                <td><textarea name="samenvatting" rows="5" cols="50" required></textarea></td>
             </tr>
             <tr>
                 <td>Omschrijving</td>
-                <td><input type="text" name="omschrijving" required></td>
+                <td><textarea name="omschrijving" rows="5" cols="50" required></textarea></td>
             </tr>
             <tr>
                 <td>Auteur</td>
@@ -124,7 +124,6 @@ if ($_SESSION['admin'] == 1) {
                         <option value="Binnenland">Binnenland</option>
                         <option value="Buitenland">Buitenland</option>
                         <option value="Politiek">Politiek</option>
-                        <option value="Klimaat">Klimaat</option>
                     </select></td>
             </tr>
         </table>
