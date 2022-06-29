@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SESSION['admin'] == 1) {
     require '../config/config.php';
 

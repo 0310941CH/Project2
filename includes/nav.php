@@ -23,7 +23,7 @@ require 'config/config.php'; ?>
             <a href="index.php"><img id="logo" src="images/Nu-nl-logo.png" alt="NU-nl_logo"></a>
             <ul class="main-menu">
                 <a href="">Net binnen</a>
-                <a href="" style="color: #1f2544;">Algemeen</a>
+                <a href="./algemeen.php" style="color: #1f2544;">Algemeen</a>
                 <a href="" style="color: #006cde;">Economie</a>
                 <a href="" style="color: #e00613;">Sport</a>
                 <a href="" style="color: #5100AF">Tech</a>
@@ -141,10 +141,10 @@ require 'config/config.php'; ?>
                 <li class="nav_subitem"><a href="https://www.nu.nl/net-binnen">Net binnen</a></li>
                 <li class="nav_subitem"><a href="https://www.nu.nl/Meest-Gelezen">Meest gelezen</a></li>
                 <li class="nav_subitem"><a href="https://www.nu.nl/spanningen-oekraine">Oorlog in Oekraïne</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/binnenland">Binnenland</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/buitenland">Buitenland</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/algemeen">Algemeen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/politiek">Politiek</a></li>
+                <li class="nav_subitem"><a href="./binnenland.php">Binnenland</a></li>
+                <li class="nav_subitem"><a href="./buitenland.php">Buitenland</a></li>
+                <li class="nav_subitem"><a href="./algemeen.php">Algemeen</a></li>
+                <li class="nav_subitem"><a href="./politiek.php">Politiek</a></li>
                 <li class="nav_subitem"><a href="https://www.nu.nl/video">Video</a></li>
                 <li class="nav_subitem"><a href="https://www.nu.nl/podcast">Podcast</a></li>
                 <li class="nav_subitem"><a href="https://www.nu.nl/weer">Weer</a></li>
