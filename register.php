@@ -25,7 +25,9 @@ include_once("config/config.php");
     //PHP Gedeelte voor inserten etc
 
     if (isset($_POST['submitInputs'])) {
+        // Checked of wachtwoord voornaam achternaan is gezet of niet
         if ($_POST['password'] != "" && $_POST['voornaam'] != "" && $_POST['achternaam'] != "") {
+            //Checked of die het aan de requirements voldoet met volgende if statment. Zo niet word hij niet toegevoegd en aangegeven dat die niet aan de volgende eisen voldoe
             $hoofdletter = preg_match('@[A-Z]@', $_POST['password']);
             $kleineletter = preg_match('@[a-z]@', $_POST['password']);
             $nummer    = preg_match('@[0-9]@', $_POST['password']);
@@ -39,7 +41,7 @@ include_once("config/config.php");
                 // Standaard rank geven || Rank 0 is voor gebruikers
                 $rank = 0;
                 //PDO Start
-
+                // Try catch voor eventuele fouten tijdens het maken van het account.
                 try {
                     $query = 'INSERT INTO users (voornaam, achternaam, email, passwords, rank) VALUES (:vname, :aname, :email, :pswrd, :rank)';
                     $values = [':vname' => $voornaam, ':aname' => $achternaam, ':email' => $email, ':pswrd' => $hash, ':rank' => $rank];
