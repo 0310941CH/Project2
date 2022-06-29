@@ -100,11 +100,11 @@ if ($_SESSION['admin'] == 1) {
             </tr>
             <tr>
                 <td>Samenvatting</td>
-                <td><textarea id="samenvatting" name="samenvatting" rows="3" cols="50"></textarea></td>
+                <td><textarea name="samenvatting" rows="5" cols="50" required></textarea></td>
             </tr>
             <tr>
                 <td>Omschrijving</td>
-                <td><textarea id="omschrijving" name="omschrijving" rows="5" cols="50"></textarea></td>
+                <td><textarea name="omschrijving" rows="5" cols="50" required></textarea></td>
             </tr>
             <tr>
                 <td>Auteur</td>

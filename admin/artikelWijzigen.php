@@ -43,17 +43,17 @@ require '../config/config.php'; ?>
                     foreach ($berichtData as $bericht) {
                         echo '<form method="POST">
         <label for="id">Bericht ID:</label><br>
-        <input type="text" id="id" name="id" readonly value=" ' . $bericht["berichtId"] . ' "><br>
+        <input type="text" id="id" name="id" readonly value=" ' . $bericht["berichtId"] . ' "></input><br>
         <label for="postDatum">Originele post datum:</label><br>
-        <input type="text" id="postDatum" name="postDatum" readonly value=" ' . $bericht["datum_toegevoegd"] . ' "><br>
+        <input type="text" id="postDatum" name="postDatum" readonly value=" ' . $bericht["datum_toegevoegd"] . ' "></input><br>
         <label for="updateDatum">Geüpdatet post datum:</label><br>
-        <input type="text" id="updateDatum" name="updateDatum" readonly value=" ' . $bericht["datum_aangepast"] . ' "><br>
+        <input type="text" id="updateDatum" name="updateDatum" readonly value=" ' . $bericht["datum_aangepast"] . ' "></input><br>
         <label for="auteur">Auteur:</label><br>
-        <input type="text" id="auteur" name="auteur" readonly value=" ' . $bericht["auteur"] . ' "><br>
+        <input type="text" id="auteur" name="auteur" readonly value=" ' . $bericht["auteur"] . ' "></input><br>
         <label for="categorie">Categorie:</label><br>
-        <input type="text" id="categorie" name="categorie" readonly value=" ' . $bericht["categorie"] . ' "><br>
+        <input type="text" id="categorie" name="categorie" readonly value=" ' . $bericht["categorie"] . ' "></input><br>
         <label for="titel">Titel:</label><br>
-        <input type="text" id="titel" name="titel" value=" ' . $bericht["titel"] . ' "><br>
+        <input type="text" id="titel" name="titel" value="' . $bericht["titel"] . ' "></input><br>
         <label for="samenvatting">Samenvatting:</label><br>
         <textarea id="samenvatting" name="samenvatting" rows="3" cols="50" >' . $bericht["samenvatting"] . '</textarea><br>
         <label for="bericht">Bericht:</label><br>
