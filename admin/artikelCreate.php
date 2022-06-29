@@ -2,16 +2,16 @@
 session_start();
 include_once("../config/config.php");
 
-// Checking if admin is logged in otherwise sending it back to adminlogin.php
+// Checken of het een redachteur is of niet
 if ($_SESSION['admin'] == 1) {
     if (isset($_POST['submitCreate'])) {
-        // The Image paths and setup for the specific image uploading
+        // Hier worden alle dingen gesetupped voor het verplaatsen van de afbeelding die ze erbij hebben gevoegd
 
         $pathDirectory = "../images/artikelAfbeelding/";
         $fullpath = $pathDirectory . basename($_FILES["image"]["name"]);
-        $uploadValidation = 1; // This is for if the image is valid for moving => 0 is not valid || 1 is valid for moving
+        $uploadValidation = 1;
         $fileType = strtolower(pathinfo($fullpath, PATHINFO_EXTENSION));
-        // Looking if this is an image
+        //Kijkt of de afbeelding wel een geldig bestand is
         $imagecheck = getimagesize($_FILES["image"]["tmp_name"]);
         if ($imagecheck !== false) {
             $uploadValidation = 1;
@@ -20,24 +20,24 @@ if ($_SESSION['admin'] == 1) {
             $uploadValidation = 0;
             exit();
         }
-        // Looking in the images map if the image exists
+        // Kijkt of de afbeelding die erin toegevoegd moet worden al in de map zit of niet
         if (file_exists($fullpath)) {
             echo "Sorry the image already exists.";
             $uploadValidation = 0;
             exit();
         }
-        //Looking if the image is png 
+        //Kijkt of de afbeelding een png is of niet
         if ($fileType != "png") {
             echo "Sorry, Only PNG files are allowed to upload";
             $uploadValidation = 0;
             exit();
         }
-        // Uploading and canceling update when its 0 it canceld. 
+        // De afbeelding uploaden of zeggen dat de upload niet gelukt is als er 0 uit is gekomen met de checks. 
         if ($uploadValidation = 0) {
             echo "Sorry your image wasn't uploaded. Try again";
         } else {
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $fullpath)) {
-
+                // Kijkt of alles wel is ingevuld
                 if ($_POST['titel'] != "" && $_POST['samenvatting'] != "" && $_POST['omschrijving'] != "" && $_POST['auteur'] != "" && $_POST['fotoauteur'] != "" && $_POST['categorie'] != "") {
                     $titel = $_POST['titel'];
                     $samenvatting = $_POST['samenvatting'];
@@ -49,6 +49,7 @@ if ($_SESSION['admin'] == 1) {
                     $image = basename($_FILES["image"]["name"]);
                     $fotoauteur = $_POST['fotoauteur'];
                     $categorie = $_POST['categorie'];
+                    // try catch voor het inserten naar de database
                     try {
                         $data = $pdo->prepare("INSERT INTO `berichten` (`titel`, `samenvatting`, `omschrijving`, `datum_toegevoegd`, `datum_aangepast`, `auteur`, `images`, `image_auteur`, `categorie`) VALUES
                         ('$titel', '$samenvatting', '$omschrijving', '$datumToegevoegd', '$datumAangepast', '$auteur', '$image', '$fotoauteur', '$categorie')");
