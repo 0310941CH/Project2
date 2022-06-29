@@ -1,3 +1,4 @@
+//Dropdown als er op geklikt wordt
 function dropdownSlide() {
     var content = document.getElementById('dropdown-content');
     var text = document.getElementById('btn-slider');
@@ -14,7 +15,7 @@ function dropdownSlide() {
     }
 }
 
-
+//als je scrollt gaat de dropdown weg
 window.onscroll = function(ev) {
     var text = document.getElementById('btn-slider');
     var content = document.getElementById('dropdown-content');
@@ -31,6 +32,7 @@ window.onscroll = function(ev) {
     }
 };
 
+//dropdown als er op geklikt wordt
 function dropdownSlideOnder() {
     var content = document.getElementById('dropdown-content');
     var text = document.getElementById('btn-slider-onder');
@@ -47,10 +49,12 @@ function dropdownSlideOnder() {
     }
 }
 
+//de datum toegevoegd kon alleen via javascript want php
 const newdate = new Date(Date.now());
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 const translate = newdate.toLocaleDateString('nl-NL', options);
 
+//de navbar wordt kleiner met gsap
 window.addEventListener('scroll', function() {
     if(this.window.pageYOffset > 30) {
         gsap.to("nav", {duration: 0.5, height: 50})
@@ -59,6 +63,7 @@ window.addEventListener('scroll', function() {
     }
 })
 
+//de navbar wordt groter met gsap
 window.addEventListener('scroll', function() {
     if(this.window.pageYOffset < 30) {
         gsap.to("nav", {duration: 0.5, height: 83})
@@ -66,4 +71,3 @@ window.addEventListener('scroll', function() {
         document.getElementById("dropdown-content").style.top = "12.01vh";
     }
 })
-

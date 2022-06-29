@@ -17,17 +17,18 @@
 
 <body>
     <nav>
+        <!--De navbar voor de grote pagina-->
         <div class="content">
             <a href="index.php"><img id="logo" src="images/Nu-nl-logo.png" alt="NU-nl_logo"></a>
             <ul class="main-menu">
-                <a href="">Net binnen</a>
-                <a href="" style="color: #1f2544;">Algemeen</a>
-                <a href="" style="color: #006cde;">Economie</a>
-                <a href="" style="color: #e00613;">Sport</a>
-                <a href="" style="color: #5100AF">Tech</a>
-                <a href="" style="color: #ed893c;">Media en Cultuur</a>
-                <a href="" style="color: #b60f80;">Achterklap</a>
-                <a href="" style="color: #1f2544;">Shop</a>
+                <a href="https://www.nu.nl/net-binnen">Net binnen</a>
+                <a href="https://www.nu.nl/algemeen" style="color: #1f2544;" id="algemeen">Algemeen</a>
+                <a href="https://www.nu.nl/economie" style="color: #006cde;" id="economie">Economie</a>
+                <a href="https://www.nu.nl/sport" style="color: #e00613;" id="sport">Sport</a>
+                <a href="https://www.nu.nl/tech" style="color: #5100AF" id="tech">Tech</a>
+                <a href="https://www.nu.nl/entertainment" style="color: #ed893c;" id="media_nav">Media en Cultuur</a>
+                <a href="https://www.nu.nl/achterklap" style="color: #b60f80;" id="achterklap">Achterklap</a>
+                <a href="https://www.nu.nl/advertorial/nushop-adverteerder" style="color: #1f2544;" id="shop">Shop</a>
                 <button id="dropdown" onclick="dropdownSlide()">
                     <li id="btn-slider">Meer</li><img id="img-meer" src="images/down.png" alt="down">
                 </button>
@@ -64,6 +65,7 @@
             </div>
         </div>
     </nav>
+    <!--De navbar als die kleiner wordt-->
     <div class="content2">
         <div class="boven">
             <div class="logolinks">
@@ -103,123 +105,125 @@
         <div class="onder">
             <div class="onder_content">
                 <a href="">Voorpagina</a>
-                <a href="">Net binnen</a>
-                <a href="">Populair</a>
+                <a href="https://www.nu.nl/net-binnen">Net binnen</a>
+                <a href="https://www.nu.nl/meest-gelezen">Populair</a>
                 <button id="dropdown" onclick="dropdownSlideOnder()">
                     <li id="btn-slider-onder">Meer</li><img id="img-meer-onder" src="images/down.png" alt="down">
                 </button>
             </div>
         </div>
     </div>
+    <!--Dropdown-->
     <div id="dropdown-content">
         <div class="container-dropdown-content">
             <!--Voorpagina-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="index.php" style="color: #1f2544;">Voorpagina</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/net-binnen">Net binnen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/Meest-Gelezen">Meest gelezen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/spanningen-oekraine">Oorlog in Oekraïne</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/binnenland">Binnenland</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/buitenland">Buitenland</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/algemeen">Algemeen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/politiek">Politiek</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/video">Video</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/podcast">Podcast</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/weer">Weer</a></li>
+                <li class="nav_header"><a href="" style="color: #1f2544;">Voorpagina</a>
+                <li class="nav_subitem"><a href="">Net binnen</a></li>
+                <li class="nav_subitem"><a href="">Meest gelezen</a></li>
+                <li class="nav_subitem"><a href="">Oorlog in Oekraïne</a></li>
+                <li class="nav_subitem"><a href="">Binnenland</a></li>
+                <li class="nav_subitem"><a href="">Buitenland</a></li>
+                <li class="nav_subitem"><a href="">Algemeen</a></li>
+                <li class="nav_subitem"><a href="">Politiek</a></li>
+                <li class="nav_subitem"><a href="">Video</a></li>
+                <li class="nav_subitem"><a href="">Podcast</a></li>
+                <li class="nav_subitem"><a href="">Weer</a></li>
                 </li>
             </ul>
             <!--Economie-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="https://www.nu.nl/economie" style="color: #006cde;">Economie</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/klimaat">Klimaat</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/wonen">Wonen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/geld">Geld</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/werk">Werk</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/ondernemen">Ondernemen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/brexit">Brexit</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/auto">Auto</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/aandelen">Aandelen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/verkeer">Verkeer</a></li>
+                <li class="nav_header"><a href="" style="color: #006cde;">Economie</a>
+                <li class="nav_subitem"><a href="">Klimaat</a></li>
+                <li class="nav_subitem"><a href="">Wonen</a></li>
+                <li class="nav_subitem"><a href="">Geld</a></li>
+                <li class="nav_subitem"><a href="">Werk</a></li>
+                <li class="nav_subitem"><a href="">Ondernemen</a></li>
+                <li class="nav_subitem"><a href="">Brexit</a></li>
+                <li class="nav_subitem"><a href="">Auto</a></li>
+                <li class="nav_subitem"><a href="">Aandelen</a></li>
+                <li class="nav_subitem"><a href="">Verkeer</a></li>
                 </li>
             </ul>
             <!--Sport-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="https://www.nu.nl/sport" style="color: #e00613;">Sport</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/voetbal">Voetbal</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/formule-1">Formule 1</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/scorebord">Scorebord</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/spellen">Spellen</a></li>
+                <li class="nav_header"><a href="" style="color: #e00613;">Sport</a>
+                <li class="nav_subitem"><a href="">Voetbal</a></li>
+                <li class="nav_subitem"><a href="">Formule 1</a></li>
+                <li class="nav_subitem"><a href="">Scorebord</a></li>
+                <li class="nav_subitem"><a href="">Spellen</a></li>
             </ul>
             </li>
             <!--Tech-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="https://www.nu.nl/tech" style="color: #5100AF">Tech</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/games">Games</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/reviews">Reviews</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/achtergrond">Achtergrond</a></li>
+                <li class="nav_header"><a href="" style="color: #5100AF">Tech</a>
+                <li class="nav_subitem"><a href="">Games</a></li>
+                <li class="nav_subitem"><a href="">Reviews</a></li>
+                <li class="nav_subitem"><a href="">Achtergrond</a></li>
                 </li>
             </ul>
             </ul>
             <!--Mediaencultuur-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="https://www.nu.nl/entertainment" style="color: #ed893c;">Media en Cultuur</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/film">Films en series</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/muziek">Muziek</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/cultuur-overig">Boek en cultuur</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/media">Media</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/achterklap">Achterklap</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/koninghuis">Koningshuis</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/tvgids">TV gids</a></li>
+                <li class="nav_header"><a href="" style="color: #ed893c;">Media en Cultuur</a>
+                <li class="nav_subitem"><a href="">Films en series</a></li>
+                <li class="nav_subitem"><a href="">Muziek</a></li>
+                <li class="nav_subitem"><a href="">Boek en cultuur</a></li>
+                <li class="nav_subitem"><a href="">Media</a></li>
+                <li class="nav_subitem"><a href="">Achterklap</a></li>
+                <li class="nav_subitem"><a href="">Koningshuis</a></li>
+                <li class="nav_subitem"><a href="">TV gids</a></li>
                 </li>
             </ul>
             <!--Overig-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="https://www.nu.nl/overig" style="color: #2a9198;">Overig</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/kind-gezin">Kind & Gezin</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/dieren">Dieren</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/eten-en-drinken">Eten en drinken</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/gezondheid">Gezondheid</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/nucheckt">NUcheckt</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/opmerkelijk">Opmerkelijk</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/uit">Thuis</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/vakantie">Vakantie</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/wetenschap">Wetenschap</a></li>
+                <li class="nav_header"><a href="" style="color: #b60f80;">Achterklap</a>
+                <li class="nav_subitem"><a href="">Kind & Gezin</a></li>
+                <li class="nav_subitem"><a href="">Dieren</a></li>
+                <li class="nav_subitem"><a href="">Eten en drinken</a></li>
+                <li class="nav_subitem"><a href="">Gezondheid</a></li>
+                <li class="nav_subitem"><a href="">NUcheckt</a></li>
+                <li class="nav_subitem"><a href="">Opmerkelijk</a></li>
+                <li class="nav_subitem"><a href="">Thuis</a></li>
+                <li class="nav_subitem"><a href="">Vakantie</a></li>
+                <li class="nav_subitem"><a href="">Wetenschap</a></li>
                 </li>
             </ul>
             <!--Regio-->
             <ul class="blokken-dropdown">
-                <li class="nav_header"><a href="https://www.nu.nl/regio" style="color: #1f2544;">Regio</a>
-                <li class="nav_subitem"><a href="https://www.nu.nl/alphen-aan-den-rijn">Alphen a/d Rijn</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/amersfoort">Amersfoort</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/amsterdam">Amsterdam</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/arnhem">Arnhem</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/breda">Breda</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/den-bosch">Den Bosch</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/den-haag">Den Haag</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/ede">Ede</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/eindhoven">Eindhoven</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/groningen">Groningen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/haarlem">Haarlem</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/leiden">Leiden</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/nijmegen">Nijmegen</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/rotterdam">Rotterdam</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/tilburg">Tilburg</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/utrecht">Utrecht</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/zeeland">Zeeland</a></li>
-                <li class="nav_subitem"><a href="https://www.nu.nl/zwolle">Zwolle</a></li>
+                <li class="nav_header"><a href="" style="color: #1f2544;">Regio</a>
+                <li class="nav_subitem"><a href="">Alphen a/d Rijn</a></li>
+                <li class="nav_subitem"><a href="">Amersfoort</a></li>
+                <li class="nav_subitem"><a href="">Amsterdam</a></li>
+                <li class="nav_subitem"><a href="">Arnhem</a></li>
+                <li class="nav_subitem"><a href="">Breda</a></li>
+                <li class="nav_subitem"><a href="">Den Bosch</a></li>
+                <li class="nav_subitem"><a href="">Den Haag</a></li>
+                <li class="nav_subitem"><a href="">Ede</a></li>
+                <li class="nav_subitem"><a href="">Eindhoven</a></li>
+                <li class="nav_subitem"><a href="">Groningen</a></li>
+                <li class="nav_subitem"><a href="">Haarlem</a></li>
+                <li class="nav_subitem"><a href="">Leiden</a></li>
+                <li class="nav_subitem"><a href="">Nijmegen</a></li>
+                <li class="nav_subitem"><a href="">Rotterdam</a></li>
+                <li class="nav_subitem"><a href="">Tilburg</a></li>
+                <li class="nav_subitem"><a href="">Utrecht</a></li>
+                <li class="nav_subitem"><a href="">Zeeland</a></li>
+                <li class="nav_subitem"><a href="">Zwolle</a></li>
             </ul>
             <ul class="blokken-dropdown-last">
-                <li class="nav_header"><a href="https://www.nu.nl/over-nu">Over NU.nl</a></li>
-                <li class="nav_header"><a href="https://www.nu.nl/nufolder">NUfolder</a></li>
-                <li class="nav_header"><a href="https://www.nu.nl/nushop-adverteerder">NUshop</a></li>
-                <li class="nav_header"><a href="https://www.nu.nl/tickets">Tickets</a></li>
+                <li class="nav_header"><a href="">Over NU.nl</a></li>
+                <li class="nav_header"><a href="">NUfolder</a></li>
+                <li class="nav_header"><a href="">NUshop</a></li>
+                <li class="nav_header"><a href="">Tickets</a></li>
             </ul>
         </div>
+        <!--De info voor als de pagina kleiner wordt-->
         <div class="dropdown-info">
-            <li class="nav_header_info"><a href="https://www.nu.nl/over-nu">Over NU.nl</a></li>
-            <li class="nav_header_info"><a href="https://www.nu.nl/nufolder">NUfolder</a></li>
-            <li class="nav_header_info"><a href="https://www.nu.nl/nushop-adverteerder">NUshop</a></li>
-            <li class="nav_header_info"><a href="https://www.nu.nl/tickets">Tickets</a></li>
+            <li class="nav_header_info"><a href="">Over NU.nl</a></li>
+            <li class="nav_header_info"><a href="">NUfolder</a></li>
+            <li class="nav_header_info"><a href="">NUshop</a></li>
+            <li class="nav_header_info"><a href="">Tickets</a></li>
         </div>
     </div>
 </body>

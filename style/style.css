@@ -40,6 +40,14 @@ body {
 
 .main-menu {
     padding-left: 10px;
+    width: 110vh;
+}
+
+.main-menu a {
+    width: auto;
+    height: 14px;
+    padding: 0px 12px;
+    border-radius: 19px;
 }
 
 .content {
@@ -54,7 +62,6 @@ body {
 .content ul {
     color: black;
     font: 14.5px Arial, Helvetica, sans-serif;
-    width: 796.67px;
     height: 31.26px;
     display: flex;
     justify-content: space-between;
@@ -242,10 +249,11 @@ body {
     margin: 0px auto 0;
     display: flex;
     width: 100%;
-    max-width: 990px;
+    max-width: 1020px;
     min-width: 280px;
     height: 96%;
     padding: 10px;
+    justify-content: space-between;
 }
 
 #dropdown {
@@ -441,17 +449,14 @@ body {
 
 /*container*/
 .left_div {
-    width: 65%;
+    width: 50%;
     height: 90vh;
     margin-left: 10px;
-    float: left;
 }
 
 .right_div {
-    width: 35%;
+    width: 40%;
     height: auto;
-    float: right;
-   
 }
 
 .content_datum {
@@ -460,7 +465,6 @@ body {
     font-size: 13px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     margin-top: 10px;
 }
@@ -498,6 +502,12 @@ body {
 .datum {
     display: flex;
     flex-direction: row;
+}
+
+@media only screen and (max-width: 900px) {
+    .content_datum {
+        font-size: 11px;
+    }
 }
 
 .icons {
@@ -549,4 +559,150 @@ body {
 
 .div-net-binnen svg {
     margin-left: 8px;
+}
+
+.icons_klein {
+    display: none;
+}
+
+@media only screen and (max-width: 1340px) {
+    .right_div {
+        margin-right: 10px;
+    }
+
+    .icon1 p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1285px) {
+    .right_div {
+        margin-right: 20px;
+    }
+
+    .icon1 p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+    .right_div {
+        width: 40%;
+        margin-right: 0;
+    }
+
+    .super-container {
+        max-width: 100%;
+    }
+
+    .icon1 p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .right_div {
+        margin-right: 40px;
+        width: 40%;
+    }
+
+    .icons {
+        gap: 3px;
+    }
+
+    .icon1 p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .right_div {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: unset;
+        padding: 0;
+    }
+
+    .left_div {
+        margin-left: 0;
+    }
+
+    .icons_klein {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .icon1_klein {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #text_icon_klein {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .content_datum {
+        display: none;
+    }
+
+    .left_div {
+        width: 100%;
+    }
+}
+
+.main-menu a:first-child:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(249, 249, 249);
+}
+
+.main-menu #algemeen:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(249, 249, 249);
+}
+
+.main-menu #economie:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(247, 249, 253);
+}
+
+.main-menu #sport:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(253, 247, 246);
+}
+
+.main-menu #tech:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(248, 245, 252);
+}
+
+.main-menu #media_nav:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(254, 251, 248);
+}
+
+.main-menu #achterklap:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(252, 247, 250);
+}
+
+.main-menu #shop:hover {
+    padding: 7px 12px;
+    border-radius: 19px;
+    background-color: rgb(249, 249, 249);
 }

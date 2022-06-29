@@ -1,5 +1,5 @@
 <?php
-$host = "localhost";
+$host = "127.0.0.1";
 $database = "nu";
 $username = "bit_academy";
 $password = "bit_academy";
