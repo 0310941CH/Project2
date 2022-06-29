@@ -22,7 +22,9 @@ include_once("config/config.php");
     <?php include("includes/header.php") ?>
     <?php
     //PHP Gedeelte
+    //Checked of de button van email is ingedrukt
     if (isset($_POST['submitEmail'])) {
+        //Checked of de email gezet is of niet
         if ($_POST['email'] != "") {
             $emailAdress = htmlspecialchars($_POST['email']); // Zet het meegegeven email adres om naar html characters.
 
@@ -33,10 +35,11 @@ include_once("config/config.php");
             ];
             $execute->execute($data);
             $email = $execute->fetch(PDO::FETCH_ASSOC);
-
+            // ALs email niet in de database gevonden word || Word het doorgestuurd naar de register page om een account aan te maken
             if ($email === false) {
                 $_SESSION['email'] = $emailAdress;
                 header("Location: register.php");
+                // Als email wel overeen komt word die doorgestuurd naar de login.php Om in te loggen
             } elseif ($email == true) {
                 $_SESSION['email'] = $emailAdress;
                 header("Location: login.php");
