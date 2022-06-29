@@ -37,7 +37,7 @@ include_once("./config/config.php");
 
             $prepare->execute($data);
             $user = $prepare->fetch(PDO::FETCH_ASSOC);
-
+            // Checked welke rank de desbetreffende persoon heeft als die 1 is krijgt die redacteur/admin rank
             if (isset($user["rank"]) && $user["rank"] == 1) {
                 $_SESSION['admin'] = 1;
             }
@@ -45,9 +45,9 @@ include_once("./config/config.php");
             if (isset($user["rank"])) {
                 $_SESSION['user'] = 1;
             }
-
+                // Checked of password hetzelfde is als het wachtwoord dat is ingevuld
             $wachtwoordCheck = password_verify($_POST["password"], $user["passwords"]);
-
+            // Als het wachtwoord goed is word die naar de index terug gestuurd.
             if ($wachtwoordCheck == true) {
                 header("Location: index.php");
                 exit();
