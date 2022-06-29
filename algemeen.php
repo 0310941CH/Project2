@@ -14,11 +14,7 @@
     <div class="contentContainer">
         <div class="artikelContainer">
             <?php
-            // Categoriën
-            $binnenland = "binnenland";
-            $buitenland = "buitenland";
-            $politiek = "politiek";
-
+            // limiet voor de artikelen
             $limitArtikelAfbeelding = 1;
             $limitArtikel = 4;
     $limitArtikelen = 7;
@@ -50,10 +46,11 @@
     echo "<br>";
 
     // Artikelen binnenland
+    $binnenland = "binnenland"; // categorie
             echo "<h1 class='kopTitel'>Binnenland</h1>";
-    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE categorie =:binnenland AND berichtId = (SELECT MAX(berichtId) FROM berichten) ORDER BY berichtId DESC LIMIT :limit"); // Haalt het laatste artikel uit de database
-    $artikel->bindValue('binnenland', $binnenland);
-    $artikel->bindValue('limit', $limitArtikelen, PDO::PARAM_INT);
+    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE categorie =:politiek ORDER BY berichtId DESC LIMIT :limit"); // Haalt het laatste artikel uit de database
+    $artikel->bindValue('politiek', $binnenland);
+    $artikel->bindValue('limit', $limitArtikelAfbeelding, PDO::PARAM_INT);
     $artikel->execute();
             $artikelInfo = $artikel->fetchAll();
             foreach ($artikelInfo as $data) {
@@ -79,10 +76,11 @@
     echo "<br>";
 
     // artikelen buitenland
+    $buitenland = "buitenland"; // categorie
             echo "<h1 class='kopTitel'>Buitenland</h1>";
-    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE categorie =:buitenland AND berichtId = (SELECT MAX(berichtId) FROM berichten) ORDER BY berichtId DESC LIMIT :limit"); // Haalt het laatste artikel uit de database
-    $artikel->bindValue('buitenland', $buitenland);
-    $artikel->bindValue('limit', $limitArtikelen, PDO::PARAM_INT);
+    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE categorie =:politiek ORDER BY berichtId DESC LIMIT :limit"); // Haalt het laatste artikel uit de database
+    $artikel->bindValue('politiek', $buitenland);
+    $artikel->bindValue('limit', $limitArtikelAfbeelding, PDO::PARAM_INT);
     $artikel->execute();
     $artikelInfo = $artikel->fetchAll();
     foreach ($artikelInfo as $data) {
@@ -108,10 +106,11 @@
     echo "<br>";
 
     // Artikelen politiek
+    $politiek = "politiek"; // categorie
             echo "<h1 class='kopTitel'>Politiek</h1>";
-    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE categorie =:politiek AND berichtId = (SELECT MAX(berichtId) FROM berichten) ORDER BY berichtId DESC LIMIT :limit"); // Haalt het laatste artikel uit de database
+    $artikel = $pdo->prepare("SELECT * FROM berichten WHERE categorie =:politiek ORDER BY berichtId DESC LIMIT :limit"); // Haalt het laatste artikel uit de database
     $artikel->bindValue('politiek', $politiek);
-    $artikel->bindValue('limit', $limitArtikelen, PDO::PARAM_INT);
+    $artikel->bindValue('limit', $limitArtikelAfbeelding, PDO::PARAM_INT);
     $artikel->execute();
     $artikelInfo = $artikel->fetchAll();
     foreach ($artikelInfo as $data) {
