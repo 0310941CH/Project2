@@ -1,3 +1,4 @@
+//de dropdown van meer weten over je account
 function dropdownDPG() {
     try {
         var dropdown_dpg = document.getElementById("dropdown_DPG");
@@ -10,7 +11,7 @@ function dropdownDPG() {
             dropdown_dpg.style.display = "flex";
             arrow.style.transform = "rotate(90deg)"
         }
-    } catch {
+    } catch (exeption) {
         console.log("Fout!");
     }
 }
