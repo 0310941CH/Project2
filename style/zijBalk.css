@@ -1,5 +1,6 @@
 .zijContainer {
     width: 35%;
+    overflow-y: hidden;
 }
 
 .divider {
@@ -35,7 +36,6 @@ a {
 .videoRechts {
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .videoLinks {
@@ -56,7 +56,6 @@ a {
 }
 
 .videoWrapper {
-    position: relative;
     text-align: center;
 }
 

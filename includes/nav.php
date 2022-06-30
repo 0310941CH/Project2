@@ -66,7 +66,7 @@ require 'config/config.php'; ?>
                 if (isset($_SESSION["user"])) {
                     echo "<a href='./includes/logout.php'>Loguit</a>";
                 } else {
-                    echo "<a href='identify.php'>Login</a>";
+                    echo "<a href='identify.php'>Inloggen</a>";
                 }
 
                 if (isset($_SESSION["admin"])) {
